@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		013638D816B84F890088FAF9 /* 20-no.png in Resources */ = {isa = PBXBuildFile; fileRef = 013638D416B84F890088FAF9 /* 20-no.png */; };
+		013638D916B84F890088FAF9 /* 20-no@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013638D516B84F890088FAF9 /* 20-no@2x.png */; };
+		013AC797169F1F50008B4C3C /* BTPhotoDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 013AC793169F1F50008B4C3C /* BTPhotoDetailViewController.mm */; };
+		013AC798169F1F50008B4C3C /* BTPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013AC795169F1F50008B4C3C /* BTPhotosViewController.m */; };
+		013AC799169F1F50008B4C3C /* BTPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013AC796169F1F50008B4C3C /* BTPhotoCell.xib */; };
+		015ADC4216F23D14008A6F5C /* BTPhotoImageUploadRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 015ADC4116F23D14008A6F5C /* BTPhotoImageUploadRequest.mm */; };
+		01793CA4169F22B7009AF7F0 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01793CA3169F22B7009AF7F0 /* AssetsLibrary.framework */; };
+		01958C031702085F00352687 /* BTCommentBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 01958C021702085F00352687 /* BTCommentBadge.m */; };
+		01958C0B1702342200352687 /* BTPhotoTagsForUserRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01958C0A1702342200352687 /* BTPhotoTagsForUserRequest.mm */; };
+		01A7DA3D16F36F59004B7D47 /* BTPhotoMetadataRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01A7DA3C16F36F59004B7D47 /* BTPhotoMetadataRequest.mm */; };
+		01A9A84C16DE62B600640AC0 /* BTPhotoDetailCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9A84B16DE62B600640AC0 /* BTPhotoDetailCommentViewController.m */; };
+		01BBDD4816B2E52B009C7F29 /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BBDD4716B2E52B009C7F29 /* appicon.png */; };
+		01BBDD4C16B2E580009C7F29 /* appicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BBDD4A16B2E531009C7F29 /* appicon@2x.png */; };
+		01C0DBF516F2409C004AD52B /* BTPhotoMetadataUploadRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01C0DBF416F2409C004AD52B /* BTPhotoMetadataUploadRequest.mm */; };
+		01C612D316BFDF0F00C8DB69 /* BTPhotoUploader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01C612D216BFDF0F00C8DB69 /* BTPhotoUploader.mm */; };
+		01C612D616C1450D00C8DB69 /* BTPhotoAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C612D516C1450D00C8DB69 /* BTPhotoAsset.m */; };
+		01CAB3F9169DE1C70055FC28 /* BTSettingsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01CAB3F8169DE1C70055FC28 /* BTSettingsViewController.mm */; };
+		01CAB3FD169DEF470055FC28 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB3FB169DEF470055FC28 /* 19-gear.png */; };
+		01CAB3FE169DEF470055FC28 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB3FC169DEF470055FC28 /* 19-gear@2x.png */; };
+		01CAB401169DEFB80055FC28 /* 29-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB3FF169DEFB80055FC28 /* 29-heart.png */; };
+		01CAB402169DEFB80055FC28 /* 29-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB400169DEFB80055FC28 /* 29-heart@2x.png */; };
+		01CAB405169DF2B80055FC28 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB403169DF2B80055FC28 /* 86-camera.png */; };
+		01CAB406169DF2B80055FC28 /* 86-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB404169DF2B80055FC28 /* 86-camera@2x.png */; };
+		681662FB16861086006ADBA6 /* BTPhoneTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 681662FA16861086006ADBA6 /* BTPhoneTracker.mm */; };
+		681662FD168E9547006ADBA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681662FC168E9547006ADBA6 /* CoreLocation.framework */; };
+		68348C5C1763901500A5CD42 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 68348C581763901500A5CD42 /* README.md */; };
+		68348C5D1763901500A5CD42 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 68348C591763901500A5CD42 /* release_notes.md */; };
+		68348C5E1763901500A5CD42 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68348C5B1763901500A5CD42 /* libTestFlight.a */; };
+		683E7B0616824446005BB855 /* ChannelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 683E7B0516824446005BB855 /* ChannelList.cpp */; };
+		683F861D1634AF2C006A35FE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 683F861C1634AF2C006A35FE /* libz.dylib */; };
+		684A4A87163C27A400C6513B /* UUID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 684A4A85163C27A300C6513B /* UUID.cpp */; };
+		684A4A89163C36DA00C6513B /* Logger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 684A4A88163C36DA00C6513B /* Logger.mm */; };
+		684A4AD5163CD1C100C6513B /* TextViewLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 684A4AD4163CD1C000C6513B /* TextViewLogger.mm */; };
+		68A0BE1E1639CD39006F66EB /* Nickname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE131639CD39006F66EB /* Nickname.cpp */; };
+		68A0BE1F1639CD39006F66EB /* FluxtreamUploaderObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE151639CD39006F66EB /* FluxtreamUploaderObjc.mm */; };
+		68A0BE201639CD39006F66EB /* BTPulseTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE161639CD39006F66EB /* BTPulseTracker.mm */; };
+		68A0BE211639CD39006F66EB /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE171639CD39006F66EB /* Utils.cpp */; };
+		68A0BE221639CD39006F66EB /* NSUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE1A1639CD39006F66EB /* NSUtils.mm */; };
+		68A0BE231639CD39006F66EB /* Samples.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE1C1639CD39006F66EB /* Samples.cpp */; };
+		68A0BE281639D134006F66EB /* heartbeat_s1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 68A0BE261639D134006F66EB /* heartbeat_s1.aiff */; };
+		68A0BE291639D134006F66EB /* heartbeat_s2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 68A0BE271639D134006F66EB /* heartbeat_s2.aiff */; };
+		68F5976A167F359200376187 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F59769167F359200376187 /* CoreMotion.framework */; };
+		C86C7F6A16331CA200D72C56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86C7F6916331CA200D72C56 /* UIKit.framework */; };
+		C86C7F6C16331CA200D72C56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86C7F6B16331CA200D72C56 /* Foundation.framework */; };
+		C86C7F6E16331CA200D72C56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86C7F6D16331CA200D72C56 /* CoreGraphics.framework */; };
+		C86C7F7416331CA200D72C56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C86C7F7216331CA200D72C56 /* InfoPlist.strings */; };
+		C86C7F7616331CA200D72C56 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = C86C7F7516331CA200D72C56 /* main.mm */; };
+		C86C7F7A16331CA200D72C56 /* BTAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C86C7F7916331CA200D72C56 /* BTAppDelegate.mm */; };
+		C86C7F7C16331CA200D72C56 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C86C7F7B16331CA200D72C56 /* Default.png */; };
+		C86C7F7E16331CA200D72C56 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C86C7F7D16331CA200D72C56 /* Default@2x.png */; };
+		C86C7F8016331CA200D72C56 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C86C7F7F16331CA200D72C56 /* Default-568h@2x.png */; };
+		C86C7F8316331CA200D72C56 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86C7F8116331CA200D72C56 /* MainStoryboard_iPhone.storyboard */; };
+		C86C7F8916331CA200D72C56 /* BTFirstViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C86C7F8816331CA200D72C56 /* BTFirstViewController.mm */; };
+		C86C7F9216331CA300D72C56 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C86C7F9116331CA300D72C56 /* second.png */; };
+		C86C7F9416331CA300D72C56 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C86C7F9316331CA300D72C56 /* second@2x.png */; };
+		C86C7FD2163344BE00D72C56 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86C7FD1163344BE00D72C56 /* CoreBluetooth.framework */; };
+		C875B20B1634648F00E150D9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C875B20A1634648F00E150D9 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		013638D416B84F890088FAF9 /* 20-no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-no.png"; sourceTree = "<group>"; };
+		013638D516B84F890088FAF9 /* 20-no@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-no@2x.png"; sourceTree = "<group>"; };
+		013AC792169F1F50008B4C3C /* BTPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotoDetailViewController.h; sourceTree = "<group>"; };
+		013AC793169F1F50008B4C3C /* BTPhotoDetailViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTPhotoDetailViewController.mm; sourceTree = "<group>"; };
+		013AC794169F1F50008B4C3C /* BTPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotosViewController.h; sourceTree = "<group>"; };
+		013AC795169F1F50008B4C3C /* BTPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPhotosViewController.m; sourceTree = "<group>"; };
+		013AC796169F1F50008B4C3C /* BTPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BTPhotoCell.xib; sourceTree = "<group>"; };
+		015ADC4016F23D14008A6F5C /* BTPhotoImageUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotoImageUploadRequest.h; sourceTree = "<group>"; };
+		015ADC4116F23D14008A6F5C /* BTPhotoImageUploadRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTPhotoImageUploadRequest.mm; sourceTree = "<group>"; };
+		01793CA3169F22B7009AF7F0 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		019349FB169B630200870FDC /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		01958C011702085F00352687 /* BTCommentBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCommentBadge.h; sourceTree = "<group>"; };
+		01958C021702085F00352687 /* BTCommentBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCommentBadge.m; sourceTree = "<group>"; };
+		01958C04170208D700352687 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		01958C091702342200352687 /* BTPhotoTagsForUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotoTagsForUserRequest.h; sourceTree = "<group>"; };
+		01958C0A1702342200352687 /* BTPhotoTagsForUserRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTPhotoTagsForUserRequest.mm; sourceTree = "<group>"; };
+		01A7DA3B16F36F59004B7D47 /* BTPhotoMetadataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotoMetadataRequest.h; sourceTree = "<group>"; };
+		01A7DA3C16F36F59004B7D47 /* BTPhotoMetadataRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTPhotoMetadataRequest.mm; sourceTree = "<group>"; };
+		01A9A84A16DE62B600640AC0 /* BTPhotoDetailCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotoDetailCommentViewController.h; sourceTree = "<group>"; };
+		01A9A84B16DE62B600640AC0 /* BTPhotoDetailCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPhotoDetailCommentViewController.m; sourceTree = "<group>"; };
+		01BBDD4716B2E52B009C7F29 /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon.png; path = ../appicon.png; sourceTree = "<group>"; };
+		01BBDD4A16B2E531009C7F29 /* appicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon@2x.png"; path = "../appicon@2x.png"; sourceTree = "<group>"; };
+		01C0DBF316F2409C004AD52B /* BTPhotoMetadataUploadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotoMetadataUploadRequest.h; sourceTree = "<group>"; };
+		01C0DBF416F2409C004AD52B /* BTPhotoMetadataUploadRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTPhotoMetadataUploadRequest.mm; sourceTree = "<group>"; };
+		01C612D116BFDF0F00C8DB69 /* BTPhotoUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotoUploader.h; sourceTree = "<group>"; };
+		01C612D216BFDF0F00C8DB69 /* BTPhotoUploader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTPhotoUploader.mm; sourceTree = "<group>"; };
+		01C612D416C1450D00C8DB69 /* BTPhotoAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPhotoAsset.h; sourceTree = "<group>"; };
+		01C612D516C1450D00C8DB69 /* BTPhotoAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPhotoAsset.m; sourceTree = "<group>"; };
+		01CAB3F7169DE1C70055FC28 /* BTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSettingsViewController.h; sourceTree = "<group>"; };
+		01CAB3F8169DE1C70055FC28 /* BTSettingsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTSettingsViewController.mm; sourceTree = "<group>"; };
+		01CAB3FB169DEF470055FC28 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
+		01CAB3FC169DEF470055FC28 /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear@2x.png"; sourceTree = "<group>"; };
+		01CAB3FF169DEFB80055FC28 /* 29-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart.png"; sourceTree = "<group>"; };
+		01CAB400169DEFB80055FC28 /* 29-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart@2x.png"; sourceTree = "<group>"; };
+		01CAB403169DF2B80055FC28 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
+		01CAB404169DF2B80055FC28 /* 86-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera@2x.png"; sourceTree = "<group>"; };
+		681662F916861086006ADBA6 /* BTPhoneTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTPhoneTracker.h; path = Shared/BTPhoneTracker.h; sourceTree = SOURCE_ROOT; };
+		681662FA16861086006ADBA6 /* BTPhoneTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BTPhoneTracker.mm; path = Shared/BTPhoneTracker.mm; sourceTree = SOURCE_ROOT; };
+		681662FC168E9547006ADBA6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		68348C581763901500A5CD42 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = TestFlightSDK1.2.5/README.md; sourceTree = "<group>"; };
+		68348C591763901500A5CD42 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = release_notes.md; path = TestFlightSDK1.2.5/release_notes.md; sourceTree = "<group>"; };
+		68348C5A1763901500A5CD42 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlightSDK1.2.5/TestFlight.h; sourceTree = "<group>"; };
+		68348C5B1763901500A5CD42 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = TestFlightSDK1.2.5/libTestFlight.a; sourceTree = "<group>"; };
+		683E7AFF16822A05005BB855 /* Mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mutex.h; path = Shared/Mutex.h; sourceTree = SOURCE_ROOT; };
+		683E7B0416824446005BB855 /* ChannelList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChannelList.h; path = Shared/ChannelList.h; sourceTree = SOURCE_ROOT; };
+		683E7B0516824446005BB855 /* ChannelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChannelList.cpp; path = Shared/ChannelList.cpp; sourceTree = SOURCE_ROOT; };
+		683F861C1634AF2C006A35FE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		684A4A80163C00F600C6513B /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = Shared/Logger.h; sourceTree = SOURCE_ROOT; };
+		684A4A85163C27A300C6513B /* UUID.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UUID.cpp; path = Shared/UUID.cpp; sourceTree = SOURCE_ROOT; };
+		684A4A86163C27A300C6513B /* UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUID.h; path = Shared/UUID.h; sourceTree = SOURCE_ROOT; };
+		684A4A88163C36DA00C6513B /* Logger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Logger.mm; path = Shared/Logger.mm; sourceTree = SOURCE_ROOT; };
+		684A4AD3163CD1C000C6513B /* TextViewLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewLogger.h; path = Shared/TextViewLogger.h; sourceTree = SOURCE_ROOT; };
+		684A4AD4163CD1C000C6513B /* TextViewLogger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextViewLogger.mm; path = Shared/TextViewLogger.mm; sourceTree = SOURCE_ROOT; };
+		68A0BE131639CD39006F66EB /* Nickname.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Nickname.cpp; path = Shared/Nickname.cpp; sourceTree = SOURCE_ROOT; };
+		68A0BE141639CD39006F66EB /* FluxtreamUploaderObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FluxtreamUploaderObjc.h; path = Shared/FluxtreamUploaderObjc.h; sourceTree = SOURCE_ROOT; };
+		68A0BE151639CD39006F66EB /* FluxtreamUploaderObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FluxtreamUploaderObjc.mm; path = Shared/FluxtreamUploaderObjc.mm; sourceTree = SOURCE_ROOT; };
+		68A0BE161639CD39006F66EB /* BTPulseTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BTPulseTracker.mm; path = Shared/BTPulseTracker.mm; sourceTree = SOURCE_ROOT; };
+		68A0BE171639CD39006F66EB /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = Shared/Utils.cpp; sourceTree = SOURCE_ROOT; };
+		68A0BE181639CD39006F66EB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Shared/Utils.h; sourceTree = SOURCE_ROOT; };
+		68A0BE191639CD39006F66EB /* NSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSUtils.h; path = Shared/NSUtils.h; sourceTree = SOURCE_ROOT; };
+		68A0BE1A1639CD39006F66EB /* NSUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NSUtils.mm; path = Shared/NSUtils.mm; sourceTree = SOURCE_ROOT; };
+		68A0BE1B1639CD39006F66EB /* BTPulseTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTPulseTracker.h; path = Shared/BTPulseTracker.h; sourceTree = SOURCE_ROOT; };
+		68A0BE1C1639CD39006F66EB /* Samples.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Samples.cpp; path = Shared/Samples.cpp; sourceTree = SOURCE_ROOT; };
+		68A0BE1D1639CD39006F66EB /* Samples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Samples.h; path = Shared/Samples.h; sourceTree = SOURCE_ROOT; };
+		68A0BE251639CEC9006F66EB /* Nickname.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Nickname.h; path = Shared/Nickname.h; sourceTree = SOURCE_ROOT; };
+		68A0BE261639D134006F66EB /* heartbeat_s1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = heartbeat_s1.aiff; path = Shared/heartbeat_s1.aiff; sourceTree = SOURCE_ROOT; };
+		68A0BE271639D134006F66EB /* heartbeat_s2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = heartbeat_s2.aiff; path = Shared/heartbeat_s2.aiff; sourceTree = SOURCE_ROOT; };
+		68F59769167F359200376187 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		C86C7F6516331CA200D72C56 /* Fluxtream Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fluxtream Capture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C86C7F6916331CA200D72C56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C86C7F6B16331CA200D72C56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C86C7F6D16331CA200D72C56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C86C7F7116331CA200D72C56 /* FluxtreamCapture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FluxtreamCapture-Info.plist"; sourceTree = "<group>"; };
+		C86C7F7316331CA200D72C56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C86C7F7516331CA200D72C56 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		C86C7F7716331CA200D72C56 /* FluxtreamCapture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FluxtreamCapture-Prefix.pch"; sourceTree = "<group>"; };
+		C86C7F7816331CA200D72C56 /* BTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAppDelegate.h; sourceTree = "<group>"; };
+		C86C7F7916331CA200D72C56 /* BTAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BTAppDelegate.mm; sourceTree = "<group>"; };
+		C86C7F7B16331CA200D72C56 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C86C7F7D16331CA200D72C56 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C86C7F7F16331CA200D72C56 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C86C7F8216331CA200D72C56 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		C86C7F8716331CA200D72C56 /* BTFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTFirstViewController.h; sourceTree = "<group>"; };
+		C86C7F8816331CA200D72C56 /* BTFirstViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BTFirstViewController.mm; sourceTree = "<group>"; };
+		C86C7F9116331CA300D72C56 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		C86C7F9316331CA300D72C56 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C86C7FD1163344BE00D72C56 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		C875B20A1634648F00E150D9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C86C7F6216331CA200D72C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01793CA4169F22B7009AF7F0 /* AssetsLibrary.framework in Frameworks */,
+				681662FD168E9547006ADBA6 /* CoreLocation.framework in Frameworks */,
+				68F5976A167F359200376187 /* CoreMotion.framework in Frameworks */,
+				683F861D1634AF2C006A35FE /* libz.dylib in Frameworks */,
+				C875B20B1634648F00E150D9 /* AudioToolbox.framework in Frameworks */,
+				C86C7FD2163344BE00D72C56 /* CoreBluetooth.framework in Frameworks */,
+				C86C7F6A16331CA200D72C56 /* UIKit.framework in Frameworks */,
+				C86C7F6C16331CA200D72C56 /* Foundation.framework in Frameworks */,
+				C86C7F6E16331CA200D72C56 /* CoreGraphics.framework in Frameworks */,
+				68348C5E1763901500A5CD42 /* libTestFlight.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		013AC78C169F16C4008B4C3C /* Settings tab */ = {
+			isa = PBXGroup;
+			children = (
+				01CAB3F7169DE1C70055FC28 /* BTSettingsViewController.h */,
+				01CAB3F8169DE1C70055FC28 /* BTSettingsViewController.mm */,
+			);
+			name = "Settings tab";
+			sourceTree = "<group>";
+		};
+		013AC78D169F1706008B4C3C /* Photos tab */ = {
+			isa = PBXGroup;
+			children = (
+				01958C06170215E100352687 /* Camera Roll collection view */,
+				01958C07170215FA00352687 /* Photo Detail view */,
+				01958C081702160C00352687 /* Comment / Tag entry view */,
+				01A7DA3E16F36F74004B7D47 /* HTTP Requests */,
+				01C612D416C1450D00C8DB69 /* BTPhotoAsset.h */,
+				01C612D516C1450D00C8DB69 /* BTPhotoAsset.m */,
+				01C612D116BFDF0F00C8DB69 /* BTPhotoUploader.h */,
+				01C612D216BFDF0F00C8DB69 /* BTPhotoUploader.mm */,
+			);
+			name = "Photos tab";
+			sourceTree = "<group>";
+		};
+		01958C06170215E100352687 /* Camera Roll collection view */ = {
+			isa = PBXGroup;
+			children = (
+				013AC794169F1F50008B4C3C /* BTPhotosViewController.h */,
+				013AC795169F1F50008B4C3C /* BTPhotosViewController.m */,
+				01958C011702085F00352687 /* BTCommentBadge.h */,
+				01958C021702085F00352687 /* BTCommentBadge.m */,
+				013AC796169F1F50008B4C3C /* BTPhotoCell.xib */,
+			);
+			name = "Camera Roll collection view";
+			sourceTree = "<group>";
+		};
+		01958C07170215FA00352687 /* Photo Detail view */ = {
+			isa = PBXGroup;
+			children = (
+				013AC792169F1F50008B4C3C /* BTPhotoDetailViewController.h */,
+				013AC793169F1F50008B4C3C /* BTPhotoDetailViewController.mm */,
+			);
+			name = "Photo Detail view";
+			sourceTree = "<group>";
+		};
+		01958C081702160C00352687 /* Comment / Tag entry view */ = {
+			isa = PBXGroup;
+			children = (
+				01A9A84A16DE62B600640AC0 /* BTPhotoDetailCommentViewController.h */,
+				01A9A84B16DE62B600640AC0 /* BTPhotoDetailCommentViewController.m */,
+			);
+			name = "Comment / Tag entry view";
+			sourceTree = "<group>";
+		};
+		01A7DA3E16F36F74004B7D47 /* HTTP Requests */ = {
+			isa = PBXGroup;
+			children = (
+				01C0DBF316F2409C004AD52B /* BTPhotoMetadataUploadRequest.h */,
+				01C0DBF416F2409C004AD52B /* BTPhotoMetadataUploadRequest.mm */,
+				015ADC4016F23D14008A6F5C /* BTPhotoImageUploadRequest.h */,
+				015ADC4116F23D14008A6F5C /* BTPhotoImageUploadRequest.mm */,
+				01A7DA3B16F36F59004B7D47 /* BTPhotoMetadataRequest.h */,
+				01A7DA3C16F36F59004B7D47 /* BTPhotoMetadataRequest.mm */,
+				01958C091702342200352687 /* BTPhotoTagsForUserRequest.h */,
+				01958C0A1702342200352687 /* BTPhotoTagsForUserRequest.mm */,
+			);
+			name = "HTTP Requests";
+			sourceTree = "<group>";
+		};
+		68348C5717638FFF00A5CD42 /* TestFlightSDK1.2.5 */ = {
+			isa = PBXGroup;
+			children = (
+				68348C581763901500A5CD42 /* README.md */,
+				68348C591763901500A5CD42 /* release_notes.md */,
+				68348C5A1763901500A5CD42 /* TestFlight.h */,
+				68348C5B1763901500A5CD42 /* libTestFlight.a */,
+			);
+			name = TestFlightSDK1.2.5;
+			sourceTree = "<group>";
+		};
+		C86C7F5A16331CA200D72C56 = {
+			isa = PBXGroup;
+			children = (
+				C86C7F6F16331CA200D72C56 /* FluxtreamCapture */,
+				C86C7F6816331CA200D72C56 /* Frameworks */,
+				C86C7F6616331CA200D72C56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C86C7F6616331CA200D72C56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C86C7F6516331CA200D72C56 /* Fluxtream Capture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C86C7F6816331CA200D72C56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01958C04170208D700352687 /* QuartzCore.framework */,
+				01793CA3169F22B7009AF7F0 /* AssetsLibrary.framework */,
+				C875B20A1634648F00E150D9 /* AudioToolbox.framework */,
+				C86C7FD1163344BE00D72C56 /* CoreBluetooth.framework */,
+				C86C7F6D16331CA200D72C56 /* CoreGraphics.framework */,
+				681662FC168E9547006ADBA6 /* CoreLocation.framework */,
+				68F59769167F359200376187 /* CoreMotion.framework */,
+				C86C7F6B16331CA200D72C56 /* Foundation.framework */,
+				C86C7F6916331CA200D72C56 /* UIKit.framework */,
+				683F861C1634AF2C006A35FE /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C86C7F6F16331CA200D72C56 /* FluxtreamCapture */ = {
+			isa = PBXGroup;
+			children = (
+				683E7B0416824446005BB855 /* ChannelList.h */,
+				683E7B0516824446005BB855 /* ChannelList.cpp */,
+				019349FB169B630200870FDC /* Constants.h */,
+				681662F916861086006ADBA6 /* BTPhoneTracker.h */,
+				681662FA16861086006ADBA6 /* BTPhoneTracker.mm */,
+				68A0BE1B1639CD39006F66EB /* BTPulseTracker.h */,
+				68A0BE161639CD39006F66EB /* BTPulseTracker.mm */,
+				68A0BE141639CD39006F66EB /* FluxtreamUploaderObjc.h */,
+				68A0BE151639CD39006F66EB /* FluxtreamUploaderObjc.mm */,
+				684A4A80163C00F600C6513B /* Logger.h */,
+				684A4A88163C36DA00C6513B /* Logger.mm */,
+				68A0BE131639CD39006F66EB /* Nickname.cpp */,
+				68A0BE251639CEC9006F66EB /* Nickname.h */,
+				68A0BE191639CD39006F66EB /* NSUtils.h */,
+				68A0BE1A1639CD39006F66EB /* NSUtils.mm */,
+				68A0BE1C1639CD39006F66EB /* Samples.cpp */,
+				68A0BE1D1639CD39006F66EB /* Samples.h */,
+				68A0BE181639CD39006F66EB /* Utils.h */,
+				68A0BE171639CD39006F66EB /* Utils.cpp */,
+				684A4A85163C27A300C6513B /* UUID.cpp */,
+				684A4A86163C27A300C6513B /* UUID.h */,
+				684A4AD3163CD1C000C6513B /* TextViewLogger.h */,
+				684A4AD4163CD1C000C6513B /* TextViewLogger.mm */,
+				683E7AFF16822A05005BB855 /* Mutex.h */,
+				C86C7F7816331CA200D72C56 /* BTAppDelegate.h */,
+				C86C7F7916331CA200D72C56 /* BTAppDelegate.mm */,
+				C86C7F8716331CA200D72C56 /* BTFirstViewController.h */,
+				C86C7F8816331CA200D72C56 /* BTFirstViewController.mm */,
+				013AC78D169F1706008B4C3C /* Photos tab */,
+				013AC78C169F16C4008B4C3C /* Settings tab */,
+				C86C7FB916331D8A00D72C56 /* Resources */,
+				C86C7F8116331CA200D72C56 /* MainStoryboard_iPhone.storyboard */,
+				C86C7F7016331CA200D72C56 /* Supporting Files */,
+			);
+			name = FluxtreamCapture;
+			path = FluxtreamCapture;
+			sourceTree = "<group>";
+		};
+		C86C7F7016331CA200D72C56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68348C5717638FFF00A5CD42 /* TestFlightSDK1.2.5 */,
+				C86C7F7116331CA200D72C56 /* FluxtreamCapture-Info.plist */,
+				C86C7F7216331CA200D72C56 /* InfoPlist.strings */,
+				C86C7F7516331CA200D72C56 /* main.mm */,
+				C86C7F7716331CA200D72C56 /* FluxtreamCapture-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C86C7FB916331D8A00D72C56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01BBDD4716B2E52B009C7F29 /* appicon.png */,
+				01BBDD4A16B2E531009C7F29 /* appicon@2x.png */,
+				01CAB3FB169DEF470055FC28 /* 19-gear.png */,
+				01CAB3FC169DEF470055FC28 /* 19-gear@2x.png */,
+				013638D416B84F890088FAF9 /* 20-no.png */,
+				013638D516B84F890088FAF9 /* 20-no@2x.png */,
+				01CAB3FF169DEFB80055FC28 /* 29-heart.png */,
+				01CAB400169DEFB80055FC28 /* 29-heart@2x.png */,
+				01CAB403169DF2B80055FC28 /* 86-camera.png */,
+				01CAB404169DF2B80055FC28 /* 86-camera@2x.png */,
+				68A0BE261639D134006F66EB /* heartbeat_s1.aiff */,
+				68A0BE271639D134006F66EB /* heartbeat_s2.aiff */,
+				C86C7F7B16331CA200D72C56 /* Default.png */,
+				C86C7F7D16331CA200D72C56 /* Default@2x.png */,
+				C86C7F7F16331CA200D72C56 /* Default-568h@2x.png */,
+				C86C7F9116331CA300D72C56 /* second.png */,
+				C86C7F9316331CA300D72C56 /* second@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C86C7F6416331CA200D72C56 /* Fluxtream Capture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C86C7F9716331CA300D72C56 /* Build configuration list for PBXNativeTarget "Fluxtream Capture" */;
+			buildPhases = (
+				C86C7F6116331CA200D72C56 /* Sources */,
+				C86C7F6216331CA200D72C56 /* Frameworks */,
+				C86C7F6316331CA200D72C56 /* Resources */,
+				C86C7F9A16331CDA00D72C56 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fluxtream Capture";
+			productName = FluxtreamCapture;
+			productReference = C86C7F6516331CA200D72C56 /* Fluxtream Capture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C86C7F5C16331CA200D72C56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = BodyTrack;
+			};
+			buildConfigurationList = C86C7F5F16331CA200D72C56 /* Build configuration list for PBXProject "FluxtreamCapture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C86C7F5A16331CA200D72C56;
+			productRefGroup = C86C7F6616331CA200D72C56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C86C7F6416331CA200D72C56 /* Fluxtream Capture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C86C7F6316331CA200D72C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C86C7F7416331CA200D72C56 /* InfoPlist.strings in Resources */,
+				C86C7F7C16331CA200D72C56 /* Default.png in Resources */,
+				C86C7F7E16331CA200D72C56 /* Default@2x.png in Resources */,
+				C86C7F8016331CA200D72C56 /* Default-568h@2x.png in Resources */,
+				C86C7F8316331CA200D72C56 /* MainStoryboard_iPhone.storyboard in Resources */,
+				C86C7F9216331CA300D72C56 /* second.png in Resources */,
+				C86C7F9416331CA300D72C56 /* second@2x.png in Resources */,
+				68A0BE281639D134006F66EB /* heartbeat_s1.aiff in Resources */,
+				68A0BE291639D134006F66EB /* heartbeat_s2.aiff in Resources */,
+				01CAB3FD169DEF470055FC28 /* 19-gear.png in Resources */,
+				01CAB3FE169DEF470055FC28 /* 19-gear@2x.png in Resources */,
+				01CAB401169DEFB80055FC28 /* 29-heart.png in Resources */,
+				01CAB402169DEFB80055FC28 /* 29-heart@2x.png in Resources */,
+				01CAB405169DF2B80055FC28 /* 86-camera.png in Resources */,
+				01CAB406169DF2B80055FC28 /* 86-camera@2x.png in Resources */,
+				013AC799169F1F50008B4C3C /* BTPhotoCell.xib in Resources */,
+				01BBDD4816B2E52B009C7F29 /* appicon.png in Resources */,
+				01BBDD4C16B2E580009C7F29 /* appicon@2x.png in Resources */,
+				013638D816B84F890088FAF9 /* 20-no.png in Resources */,
+				013638D916B84F890088FAF9 /* 20-no@2x.png in Resources */,
+				68348C5C1763901500A5CD42 /* README.md in Resources */,
+				68348C5D1763901500A5CD42 /* release_notes.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C86C7F9A16331CDA00D72C56 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n#buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\n#buildNumber=$(($buildNumber + 1))\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C86C7F6116331CA200D72C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C86C7F7616331CA200D72C56 /* main.mm in Sources */,
+				C86C7F7A16331CA200D72C56 /* BTAppDelegate.mm in Sources */,
+				C86C7F8916331CA200D72C56 /* BTFirstViewController.mm in Sources */,
+				68A0BE1E1639CD39006F66EB /* Nickname.cpp in Sources */,
+				68A0BE1F1639CD39006F66EB /* FluxtreamUploaderObjc.mm in Sources */,
+				68A0BE201639CD39006F66EB /* BTPulseTracker.mm in Sources */,
+				68A0BE211639CD39006F66EB /* Utils.cpp in Sources */,
+				68A0BE221639CD39006F66EB /* NSUtils.mm in Sources */,
+				68A0BE231639CD39006F66EB /* Samples.cpp in Sources */,
+				684A4A87163C27A400C6513B /* UUID.cpp in Sources */,
+				684A4A89163C36DA00C6513B /* Logger.mm in Sources */,
+				684A4AD5163CD1C100C6513B /* TextViewLogger.mm in Sources */,
+				683E7B0616824446005BB855 /* ChannelList.cpp in Sources */,
+				681662FB16861086006ADBA6 /* BTPhoneTracker.mm in Sources */,
+				01CAB3F9169DE1C70055FC28 /* BTSettingsViewController.mm in Sources */,
+				013AC797169F1F50008B4C3C /* BTPhotoDetailViewController.mm in Sources */,
+				013AC798169F1F50008B4C3C /* BTPhotosViewController.m in Sources */,
+				01C612D316BFDF0F00C8DB69 /* BTPhotoUploader.mm in Sources */,
+				01C612D616C1450D00C8DB69 /* BTPhotoAsset.m in Sources */,
+				01A9A84C16DE62B600640AC0 /* BTPhotoDetailCommentViewController.m in Sources */,
+				015ADC4216F23D14008A6F5C /* BTPhotoImageUploadRequest.mm in Sources */,
+				01C0DBF516F2409C004AD52B /* BTPhotoMetadataUploadRequest.mm in Sources */,
+				01A7DA3D16F36F59004B7D47 /* BTPhotoMetadataRequest.mm in Sources */,
+				01958C031702085F00352687 /* BTCommentBadge.m in Sources */,
+				01958C0B1702342200352687 /* BTPhotoTagsForUserRequest.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C86C7F7216331CA200D72C56 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C86C7F7316331CA200D72C56 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C86C7F8116331CA200D72C56 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C86C7F8216331CA200D72C56 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C86C7F9516331CA300D72C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C86C7F9616331CA300D72C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C86C7F9816331CA300D72C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FluxtreamCapture/FluxtreamCapture-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				INFOPLIST_FILE = "FluxtreamCapture/FluxtreamCapture-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FluxtreamCapture/TestFlightSDK1.2.5\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C86C7F9916331CA300D72C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FluxtreamCapture/FluxtreamCapture-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				INFOPLIST_FILE = "FluxtreamCapture/FluxtreamCapture-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FluxtreamCapture/TestFlightSDK1.2.5\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C86C7F5F16331CA200D72C56 /* Build configuration list for PBXProject "FluxtreamCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C86C7F9516331CA300D72C56 /* Debug */,
+				C86C7F9616331CA300D72C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C86C7F9716331CA300D72C56 /* Build configuration list for PBXNativeTarget "Fluxtream Capture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C86C7F9816331CA300D72C56 /* Debug */,
+				C86C7F9916331CA300D72C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C86C7F5C16331CA200D72C56 /* Project object */;
+}

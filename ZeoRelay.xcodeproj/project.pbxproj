@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6833771D163370AB00C43E86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6833771C163370AB00C43E86 /* Cocoa.framework */; };
+		68337727163370AB00C43E86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68337725163370AB00C43E86 /* InfoPlist.strings */; };
+		68337729163370AB00C43E86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68337728163370AB00C43E86 /* main.m */; };
+		6833772D163370AB00C43E86 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6833772B163370AB00C43E86 /* Credits.rtf */; };
+		68337730163370AB00C43E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6833772F163370AB00C43E86 /* AppDelegate.m */; };
+		68337733163370AC00C43E86 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68337731163370AC00C43E86 /* MainMenu.xib */; };
+		68337736163370AC00C43E86 /* ZeoRelay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68337734163370AC00C43E86 /* ZeoRelay.xcdatamodeld */; };
+		6833773E163370AC00C43E86 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6833773D163370AC00C43E86 /* SenTestingKit.framework */; };
+		6833773F163370AC00C43E86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6833771C163370AB00C43E86 /* Cocoa.framework */; };
+		68337747163370AC00C43E86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68337745163370AC00C43E86 /* InfoPlist.strings */; };
+		6833774A163370AC00C43E86 /* ZeoRelayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68337749163370AC00C43E86 /* ZeoRelayTests.m */; };
+		68912E1E1636F2B100969C19 /* FluxtreamUploaderObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68912E151636F2B100969C19 /* FluxtreamUploaderObjc.mm */; };
+		68912E1F1636F2B100969C19 /* NSUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68912E171636F2B100969C19 /* NSUtils.mm */; };
+		68912E201636F2B100969C19 /* RawZeoReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68912E181636F2B100969C19 /* RawZeoReader.cpp */; };
+		68912E211636F2B100969C19 /* Samples.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68912E1A1636F2B100969C19 /* Samples.cpp */; };
+		68912E221636F2B100969C19 /* Utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68912E1D1636F2B100969C19 /* Utils.mm */; };
+		68912E271636F34600969C19 /* RawZeoRelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68912E251636F34600969C19 /* RawZeoRelay.cpp */; };
+		68912E2A163750DD00969C19 /* FluxtreamUploaderCpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68912E28163750DD00969C19 /* FluxtreamUploaderCpp.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68337740163370AC00C43E86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6833770F163370AB00C43E86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68337717163370AB00C43E86;
+			remoteInfo = ZeoRelay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		68337718163370AB00C43E86 /* ZeoRelay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeoRelay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6833771C163370AB00C43E86 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6833771F163370AB00C43E86 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		68337720163370AB00C43E86 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		68337721163370AB00C43E86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		68337724163370AB00C43E86 /* ZeoRelay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZeoRelay-Info.plist"; sourceTree = "<group>"; };
+		68337726163370AB00C43E86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		68337728163370AB00C43E86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6833772A163370AB00C43E86 /* ZeoRelay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZeoRelay-Prefix.pch"; sourceTree = "<group>"; };
+		6833772C163370AB00C43E86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6833772E163370AB00C43E86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6833772F163370AB00C43E86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		68337732163370AC00C43E86 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		68337735163370AC00C43E86 /* ZeoRelay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZeoRelay.xcdatamodel; sourceTree = "<group>"; };
+		6833773C163370AC00C43E86 /* ZeoRelayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeoRelayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6833773D163370AC00C43E86 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		68337744163370AC00C43E86 /* ZeoRelayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZeoRelayTests-Info.plist"; sourceTree = "<group>"; };
+		68337746163370AC00C43E86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		68337748163370AC00C43E86 /* ZeoRelayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeoRelayTests.h; sourceTree = "<group>"; };
+		68337749163370AC00C43E86 /* ZeoRelayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeoRelayTests.m; sourceTree = "<group>"; };
+		68912E141636F2B100969C19 /* FluxtreamUploaderObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FluxtreamUploaderObjc.h; path = Shared/FluxtreamUploaderObjc.h; sourceTree = "<group>"; };
+		68912E151636F2B100969C19 /* FluxtreamUploaderObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FluxtreamUploaderObjc.mm; path = Shared/FluxtreamUploaderObjc.mm; sourceTree = "<group>"; };
+		68912E161636F2B100969C19 /* NSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSUtils.h; path = Shared/NSUtils.h; sourceTree = "<group>"; };
+		68912E171636F2B100969C19 /* NSUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NSUtils.mm; path = Shared/NSUtils.mm; sourceTree = "<group>"; };
+		68912E181636F2B100969C19 /* RawZeoReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RawZeoReader.cpp; path = Shared/RawZeoReader.cpp; sourceTree = "<group>"; };
+		68912E191636F2B100969C19 /* RawZeoReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RawZeoReader.h; path = Shared/RawZeoReader.h; sourceTree = "<group>"; };
+		68912E1A1636F2B100969C19 /* Samples.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Samples.cpp; path = Shared/Samples.cpp; sourceTree = "<group>"; };
+		68912E1B1636F2B100969C19 /* Samples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Samples.h; path = Shared/Samples.h; sourceTree = "<group>"; };
+		68912E1C1636F2B100969C19 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Shared/Utils.h; sourceTree = "<group>"; };
+		68912E1D1636F2B100969C19 /* Utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Utils.mm; path = Shared/Utils.mm; sourceTree = "<group>"; };
+		68912E251636F34600969C19 /* RawZeoRelay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RawZeoRelay.cpp; path = Shared/RawZeoRelay.cpp; sourceTree = "<group>"; };
+		68912E261636F34600969C19 /* RawZeoRelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RawZeoRelay.h; path = Shared/RawZeoRelay.h; sourceTree = "<group>"; };
+		68912E28163750DD00969C19 /* FluxtreamUploaderCpp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FluxtreamUploaderCpp.mm; sourceTree = "<group>"; };
+		68912E29163750DD00969C19 /* FluxtreamUploaderCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FluxtreamUploaderCpp.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68337715163370AB00C43E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6833771D163370AB00C43E86 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68337738163370AC00C43E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6833773E163370AC00C43E86 /* SenTestingKit.framework in Frameworks */,
+				6833773F163370AC00C43E86 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6833770D163370AB00C43E86 = {
+			isa = PBXGroup;
+			children = (
+				68912E241636F30100969C19 /* Shared */,
+				68337722163370AB00C43E86 /* ZeoRelay */,
+				68337742163370AC00C43E86 /* ZeoRelayTests */,
+				6833771B163370AB00C43E86 /* Frameworks */,
+				68337719163370AB00C43E86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68337719163370AB00C43E86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68337718163370AB00C43E86 /* ZeoRelay.app */,
+				6833773C163370AC00C43E86 /* ZeoRelayTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6833771B163370AB00C43E86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6833771C163370AB00C43E86 /* Cocoa.framework */,
+				6833773D163370AC00C43E86 /* SenTestingKit.framework */,
+				6833771E163370AB00C43E86 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6833771E163370AB00C43E86 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6833771F163370AB00C43E86 /* AppKit.framework */,
+				68337720163370AB00C43E86 /* CoreData.framework */,
+				68337721163370AB00C43E86 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		68337722163370AB00C43E86 /* ZeoRelay */ = {
+			isa = PBXGroup;
+			children = (
+				6833772E163370AB00C43E86 /* AppDelegate.h */,
+				6833772F163370AB00C43E86 /* AppDelegate.m */,
+				68337731163370AC00C43E86 /* MainMenu.xib */,
+				68337734163370AC00C43E86 /* ZeoRelay.xcdatamodeld */,
+				68337723163370AB00C43E86 /* Supporting Files */,
+			);
+			path = ZeoRelay;
+			sourceTree = "<group>";
+		};
+		68337723163370AB00C43E86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68337724163370AB00C43E86 /* ZeoRelay-Info.plist */,
+				68337725163370AB00C43E86 /* InfoPlist.strings */,
+				68337728163370AB00C43E86 /* main.m */,
+				6833772A163370AB00C43E86 /* ZeoRelay-Prefix.pch */,
+				6833772B163370AB00C43E86 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68337742163370AC00C43E86 /* ZeoRelayTests */ = {
+			isa = PBXGroup;
+			children = (
+				68337748163370AC00C43E86 /* ZeoRelayTests.h */,
+				68337749163370AC00C43E86 /* ZeoRelayTests.m */,
+				68337743163370AC00C43E86 /* Supporting Files */,
+			);
+			path = ZeoRelayTests;
+			sourceTree = "<group>";
+		};
+		68337743163370AC00C43E86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68337744163370AC00C43E86 /* ZeoRelayTests-Info.plist */,
+				68337745163370AC00C43E86 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68912E241636F30100969C19 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				68912E141636F2B100969C19 /* FluxtreamUploaderObjc.h */,
+				68912E151636F2B100969C19 /* FluxtreamUploaderObjc.mm */,
+				68912E161636F2B100969C19 /* NSUtils.h */,
+				68912E171636F2B100969C19 /* NSUtils.mm */,
+				68912E181636F2B100969C19 /* RawZeoReader.cpp */,
+				68912E191636F2B100969C19 /* RawZeoReader.h */,
+				68912E1A1636F2B100969C19 /* Samples.cpp */,
+				68912E1B1636F2B100969C19 /* Samples.h */,
+				68912E1C1636F2B100969C19 /* Utils.h */,
+				68912E1D1636F2B100969C19 /* Utils.mm */,
+				68912E251636F34600969C19 /* RawZeoRelay.cpp */,
+				68912E261636F34600969C19 /* RawZeoRelay.h */,
+				68912E28163750DD00969C19 /* FluxtreamUploaderCpp.mm */,
+				68912E29163750DD00969C19 /* FluxtreamUploaderCpp.h */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68337717163370AB00C43E86 /* ZeoRelay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6833774D163370AC00C43E86 /* Build configuration list for PBXNativeTarget "ZeoRelay" */;
+			buildPhases = (
+				68337714163370AB00C43E86 /* Sources */,
+				68337715163370AB00C43E86 /* Frameworks */,
+				68337716163370AB00C43E86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeoRelay;
+			productName = ZeoRelay;
+			productReference = 68337718163370AB00C43E86 /* ZeoRelay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6833773B163370AC00C43E86 /* ZeoRelayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68337750163370AC00C43E86 /* Build configuration list for PBXNativeTarget "ZeoRelayTests" */;
+			buildPhases = (
+				68337737163370AC00C43E86 /* Sources */,
+				68337738163370AC00C43E86 /* Frameworks */,
+				68337739163370AC00C43E86 /* Resources */,
+				6833773A163370AC00C43E86 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68337741163370AC00C43E86 /* PBXTargetDependency */,
+			);
+			name = ZeoRelayTests;
+			productName = ZeoRelayTests;
+			productReference = 6833773C163370AC00C43E86 /* ZeoRelayTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6833770F163370AB00C43E86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = rsargent;
+			};
+			buildConfigurationList = 68337712163370AB00C43E86 /* Build configuration list for PBXProject "ZeoRelay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6833770D163370AB00C43E86;
+			productRefGroup = 68337719163370AB00C43E86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68337717163370AB00C43E86 /* ZeoRelay */,
+				6833773B163370AC00C43E86 /* ZeoRelayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68337716163370AB00C43E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68337727163370AB00C43E86 /* InfoPlist.strings in Resources */,
+				6833772D163370AB00C43E86 /* Credits.rtf in Resources */,
+				68337733163370AC00C43E86 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68337739163370AC00C43E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68337747163370AC00C43E86 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6833773A163370AC00C43E86 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68337714163370AB00C43E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68337729163370AB00C43E86 /* main.m in Sources */,
+				68337730163370AB00C43E86 /* AppDelegate.m in Sources */,
+				68337736163370AC00C43E86 /* ZeoRelay.xcdatamodeld in Sources */,
+				68912E1E1636F2B100969C19 /* FluxtreamUploaderObjc.mm in Sources */,
+				68912E1F1636F2B100969C19 /* NSUtils.mm in Sources */,
+				68912E201636F2B100969C19 /* RawZeoReader.cpp in Sources */,
+				68912E211636F2B100969C19 /* Samples.cpp in Sources */,
+				68912E221636F2B100969C19 /* Utils.mm in Sources */,
+				68912E271636F34600969C19 /* RawZeoRelay.cpp in Sources */,
+				68912E2A163750DD00969C19 /* FluxtreamUploaderCpp.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68337737163370AC00C43E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6833774A163370AC00C43E86 /* ZeoRelayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68337741163370AC00C43E86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68337717163370AB00C43E86 /* ZeoRelay */;
+			targetProxy = 68337740163370AC00C43E86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		68337725163370AB00C43E86 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68337726163370AB00C43E86 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6833772B163370AB00C43E86 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6833772C163370AB00C43E86 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		68337731163370AC00C43E86 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68337732163370AC00C43E86 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		68337745163370AC00C43E86 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68337746163370AC00C43E86 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6833774B163370AC00C43E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6833774C163370AC00C43E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6833774E163370AC00C43E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZeoRelay/ZeoRelay-Prefix.pch";
+				INFOPLIST_FILE = "ZeoRelay/ZeoRelay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6833774F163370AC00C43E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZeoRelay/ZeoRelay-Prefix.pch";
+				INFOPLIST_FILE = "ZeoRelay/ZeoRelay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		68337751163370AC00C43E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZeoRelay.app/Contents/MacOS/ZeoRelay";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZeoRelay/ZeoRelay-Prefix.pch";
+				INFOPLIST_FILE = "ZeoRelayTests/ZeoRelayTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		68337752163370AC00C43E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZeoRelay.app/Contents/MacOS/ZeoRelay";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZeoRelay/ZeoRelay-Prefix.pch";
+				INFOPLIST_FILE = "ZeoRelayTests/ZeoRelayTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68337712163370AB00C43E86 /* Build configuration list for PBXProject "ZeoRelay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6833774B163370AC00C43E86 /* Debug */,
+				6833774C163370AC00C43E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6833774D163370AC00C43E86 /* Build configuration list for PBXNativeTarget "ZeoRelay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6833774E163370AC00C43E86 /* Debug */,
+				6833774F163370AC00C43E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68337750163370AC00C43E86 /* Build configuration list for PBXNativeTarget "ZeoRelayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68337751163370AC00C43E86 /* Debug */,
+				68337752163370AC00C43E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68337734163370AC00C43E86 /* ZeoRelay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68337735163370AC00C43E86 /* ZeoRelay.xcdatamodel */,
+			);
+			currentVersion = 68337735163370AC00C43E86 /* ZeoRelay.xcdatamodel */;
+			path = ZeoRelay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6833770F163370AB00C43E86 /* Project object */;
+}
