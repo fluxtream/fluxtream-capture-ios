@@ -6,7 +6,11 @@ Fluxtream capture for iOS.  Records and uploads:
 - Location
 - Motion (10 Hz, acceleration and orientation)
 - Photos, with tags and comments
-- Heart rate and R-R timings for each heart beat from Polar H7 (requires Bluetooth Low Energy device, e.g. iPhone 4s or 5)
+- Heart rate and R-R timings for every heart beat from Polar H7.
+  Heart rate requires hardware with Bluetooth Low Energy (BLE, or Bluetooth Smart) support, such as
+  - iPhone 4s, 5, or later
+  - iPad 3, 4, or later
+  - iPod 4th generation, or later
 
 More info on heart rate capture, R-R timings, and heart rate variability (HRV) at https://docs.google.com/document/d/1eEdfpfL9Jy9EX9_FvWuDv7pA_mWHkcgZfS6ggxaTZD0/edit
 
