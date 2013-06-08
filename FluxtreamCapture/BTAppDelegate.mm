@@ -18,7 +18,7 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
 #pragma clang diagnostic pop
-    [TestFlight takeOff:@"c989fabcf5fa3f8b701757e52e30bd73_MTQ1ODE0MjAxMi0xMC0yMSAxNjo1OTozMi40MzE5Nzc"];
+    [TestFlight takeOff:@"f9c4aa0a-550e-4c8c-bdce-1b9dfa6b6f1b"];
     
     _pulseTracker = [[BTPulseTracker alloc] init];
     _phoneTracker = [[BTPhoneTracker alloc] init];
