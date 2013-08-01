@@ -151,16 +151,31 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
 - (void)discoverPhotos
 {
     _discoveredPhotos = [[NSMutableArray alloc] init];
+    NSLog(@"in discoverPhotos");
     
     void (^assetEnumerator)(ALAsset *, NSUInteger, BOOL *) = ^(ALAsset *result, NSUInteger index, BOOL *stop) {
-        if (result != NULL) {            
+        if (result != NULL) {
             // check for orientation, set uploadStatus based on that
-            NSNumber *orientationValue = [result valueForProperty:@"ALAssetPropertyOrientation"];
+            
+            ALAssetRepresentation *representation = [result defaultRepresentation];
+            double width = [representation dimensions].width;
+            NSLog(@"Enumerating photo with width %g", width);
+
+            // TODO: decide what really qualifieds as a pano.  3264 is the width of a landscape iPhone 5 photo
+            if (width > 3264) {
+                NSLog(@"It's a pano!");
+                [self processAsset:result forOrientation:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_LEFT];
+            }
+            
+
+            /*
+             NSNumber *orientationValue = [result valueForProperty:@"ALAssetPropertyOrientation"];
             int orientation = 0;
             if (orientationValue != nil) {
                 orientation = (ALAssetOrientation)[orientationValue intValue];
             }
-            
+             */
+            /*
             switch (orientation) {
                 case ALAssetOrientationUp:
                 case ALAssetOrientationUpMirrored:
@@ -186,7 +201,9 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
                     NSLog(@"** Unknown photo orientation! **");
                     break;
             }
+             */
         }
+ 
     };
     
     void (^assetGroupEnumerator)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop) {

@@ -34,8 +34,8 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
     NSString *crlf = [NSString stringWithFormat:@"\r\n"];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *baseURL = [defaults objectForKey:DEFAULTS_SERVER];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"http://%@/api/bodytrack/photoUpload?connector_name=fluxtream_capture", baseURL]]];
+    //NSString *baseURL = [defaults objectForKey:DEFAULTS_SERVER];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"http://upload.gigapan.org/upload"]]];
     
     [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     [request setHTTPShouldHandleCookies:NO];

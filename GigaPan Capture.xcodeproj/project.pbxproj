@@ -135,14 +135,14 @@
 		68A0BE261639D134006F66EB /* heartbeat_s1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = heartbeat_s1.aiff; path = Shared/heartbeat_s1.aiff; sourceTree = SOURCE_ROOT; };
 		68A0BE271639D134006F66EB /* heartbeat_s2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = heartbeat_s2.aiff; path = Shared/heartbeat_s2.aiff; sourceTree = SOURCE_ROOT; };
 		68F59769167F359200376187 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		C86C7F6516331CA200D72C56 /* Fluxtream Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fluxtream Capture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C86C7F6516331CA200D72C56 /* GigaPan Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GigaPan Capture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86C7F6916331CA200D72C56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C86C7F6B16331CA200D72C56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C86C7F6D16331CA200D72C56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C86C7F7116331CA200D72C56 /* FluxtreamCapture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FluxtreamCapture-Info.plist"; sourceTree = "<group>"; };
+		C86C7F7116331CA200D72C56 /* GigaPan Capture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GigaPan Capture-Info.plist"; sourceTree = "<group>"; };
 		C86C7F7316331CA200D72C56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C86C7F7516331CA200D72C56 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
-		C86C7F7716331CA200D72C56 /* FluxtreamCapture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FluxtreamCapture-Prefix.pch"; sourceTree = "<group>"; };
+		C86C7F7716331CA200D72C56 /* GigaPan Capture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GigaPan Capture-Prefix.pch"; sourceTree = "<group>"; };
 		C86C7F7816331CA200D72C56 /* BTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAppDelegate.h; sourceTree = "<group>"; };
 		C86C7F7916331CA200D72C56 /* BTAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BTAppDelegate.mm; sourceTree = "<group>"; };
 		C86C7F7B16331CA200D72C56 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		C86C7F6616331CA200D72C56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C86C7F6516331CA200D72C56 /* Fluxtream Capture.app */,
+				C86C7F6516331CA200D72C56 /* GigaPan Capture.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -329,7 +329,6 @@
 				C86C7F8116331CA200D72C56 /* MainStoryboard_iPhone.storyboard */,
 				C86C7F7016331CA200D72C56 /* Supporting Files */,
 			);
-			name = FluxtreamCapture;
 			path = FluxtreamCapture;
 			sourceTree = "<group>";
 		};
@@ -337,10 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				68348C5717638FFF00A5CD42 /* TestFlightSDK1.2.5 */,
-				C86C7F7116331CA200D72C56 /* FluxtreamCapture-Info.plist */,
+				C86C7F7116331CA200D72C56 /* GigaPan Capture-Info.plist */,
 				C86C7F7216331CA200D72C56 /* InfoPlist.strings */,
 				C86C7F7516331CA200D72C56 /* main.mm */,
-				C86C7F7716331CA200D72C56 /* FluxtreamCapture-Prefix.pch */,
+				C86C7F7716331CA200D72C56 /* GigaPan Capture-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -372,9 +371,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C86C7F6416331CA200D72C56 /* Fluxtream Capture */ = {
+		C86C7F6416331CA200D72C56 /* GigaPan Capture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C86C7F9716331CA300D72C56 /* Build configuration list for PBXNativeTarget "Fluxtream Capture" */;
+			buildConfigurationList = C86C7F9716331CA300D72C56 /* Build configuration list for PBXNativeTarget "GigaPan Capture" */;
 			buildPhases = (
 				C86C7F6116331CA200D72C56 /* Sources */,
 				C86C7F6216331CA200D72C56 /* Frameworks */,
@@ -385,9 +384,9 @@
 			);
 			dependencies = (
 			);
-			name = "Fluxtream Capture";
+			name = "GigaPan Capture";
 			productName = FluxtreamCapture;
-			productReference = C86C7F6516331CA200D72C56 /* Fluxtream Capture.app */;
+			productReference = C86C7F6516331CA200D72C56 /* GigaPan Capture.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -400,7 +399,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = BodyTrack;
 			};
-			buildConfigurationList = C86C7F5F16331CA200D72C56 /* Build configuration list for PBXProject "FluxtreamCapture" */;
+			buildConfigurationList = C86C7F5F16331CA200D72C56 /* Build configuration list for PBXProject "GigaPan Capture" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -412,7 +411,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C86C7F6416331CA200D72C56 /* Fluxtream Capture */,
+				C86C7F6416331CA200D72C56 /* GigaPan Capture */,
 			);
 		};
 /* End PBXProject section */
@@ -579,14 +578,14 @@
 			buildSettings = {
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FluxtreamCapture/FluxtreamCapture-Prefix.pch";
+				GCC_PREFIX_HEADER = "FluxtreamCapture/GigaPan Capture-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = NO;
-				INFOPLIST_FILE = "FluxtreamCapture/FluxtreamCapture-Info.plist";
+				INFOPLIST_FILE = "FluxtreamCapture/GigaPan Capture-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,7 +601,7 @@
 			buildSettings = {
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FluxtreamCapture/FluxtreamCapture-Prefix.pch";
+				GCC_PREFIX_HEADER = "FluxtreamCapture/GigaPan Capture-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -610,7 +609,7 @@
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = NO;
-				INFOPLIST_FILE = "FluxtreamCapture/FluxtreamCapture-Info.plist";
+				INFOPLIST_FILE = "FluxtreamCapture/GigaPan Capture-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,7 +623,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C86C7F5F16331CA200D72C56 /* Build configuration list for PBXProject "FluxtreamCapture" */ = {
+		C86C7F5F16331CA200D72C56 /* Build configuration list for PBXProject "GigaPan Capture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C86C7F9516331CA300D72C56 /* Debug */,
@@ -633,7 +632,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C86C7F9716331CA300D72C56 /* Build configuration list for PBXNativeTarget "Fluxtream Capture" */ = {
+		C86C7F9716331CA300D72C56 /* Build configuration list for PBXNativeTarget "GigaPan Capture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C86C7F9816331CA300D72C56 /* Debug */,
