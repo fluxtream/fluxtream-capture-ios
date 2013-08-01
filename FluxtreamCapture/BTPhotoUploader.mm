@@ -166,42 +166,6 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
                 NSLog(@"It's a pano!");
                 [self processAsset:result forOrientation:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_LEFT];
             }
-            
-
-            /*
-             NSNumber *orientationValue = [result valueForProperty:@"ALAssetPropertyOrientation"];
-            int orientation = 0;
-            if (orientationValue != nil) {
-                orientation = (ALAssetOrientation)[orientationValue intValue];
-            }
-             */
-            /*
-            switch (orientation) {
-                case ALAssetOrientationUp:
-                case ALAssetOrientationUpMirrored:
-                    [self processAsset:result forOrientation:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_LEFT];
-                    break;
-                    
-                case ALAssetOrientationDown:
-                case ALAssetOrientationDownMirrored:
-                    [self processAsset:result forOrientation:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_RIGHT];
-                    break;
-                    
-                case ALAssetOrientationLeft:
-                case ALAssetOrientationLeftMirrored:
-                    [self processAsset:result forOrientation:DEFAULTS_PHOTO_ORIENTATION_UPSIDE_DOWN];
-                    break;
-                    
-                case ALAssetOrientationRight:
-                case ALAssetOrientationRightMirrored:
-                    [self processAsset:result forOrientation:DEFAULTS_PHOTO_ORIENTATION_PORTRAIT];
-                    break;
-                    
-                default:
-                    NSLog(@"** Unknown photo orientation! **");
-                    break;
-            }
-             */
         }
  
     };
