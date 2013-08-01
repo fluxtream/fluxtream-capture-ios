@@ -23,11 +23,11 @@
             </objects>
             <point key="canvasLocation" x="108" y="478"/>
         </scene>
-        <!--Navigation Controller - Camera-->
+        <!--Navigation Controller - Panoramas-->
         <scene sceneID="TkU-0K-CwR">
             <objects>
                 <navigationController definesPresentationContext="YES" id="MY8-mu-CQT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Camera" image="86-camera.png" id="xrx-uw-AEY"/>
+                    <tabBarItem key="tabBarItem" title="Panoramas" image="86-camera.png" id="xrx-uw-AEY"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="myY-je-FIn">
@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="661" y="478"/>
         </scene>
-        <!--Photos View Controller - Camera Roll-->
+        <!--Photos View Controller - Panoramas-->
         <scene sceneID="FlM-vf-IVg">
             <objects>
                 <viewController id="mWQ-7C-rf0" customClass="BTPhotosViewController" sceneMemberID="viewController">
@@ -81,7 +81,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Camera Roll" id="NXj-5F-dE5"/>
+                    <navigationItem key="navigationItem" title="Panoramas" id="NXj-5F-dE5"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="cVP-kr-CjC" id="wYh-2p-nV7"/>

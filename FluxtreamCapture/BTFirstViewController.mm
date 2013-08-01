@@ -51,7 +51,7 @@
         [defaults synchronize];
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Welcome"
-                                                          message:@"Please enter your Fluxtream username and password (register at fluxtream.com)"
+                                                          message:@"Please enter your GigaPan username and password (register at gigapan.com)"
                                                          delegate:self
                                                 cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];
