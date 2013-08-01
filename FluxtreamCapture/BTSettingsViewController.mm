@@ -148,10 +148,10 @@
     [self updateUploaderFromUI:phoneTracker.locationUploader];
     [self updateUploaderFromUI:phoneTracker.motionUploader];
 
-    phoneTracker.recordBatteryEnabled = [defaults boolForKey:DEFAULTS_RECORD_APP_STATS];
-    phoneTracker.recordAppStatsEnabled = [defaults boolForKey:DEFAULTS_RECORD_APP_STATS];
-    phoneTracker.recordLocationEnabled = [defaults boolForKey:DEFAULTS_RECORD_LOCATION];
-    phoneTracker.recordMotionEnabled = [defaults boolForKey:DEFAULTS_RECORD_MOTION];
+    phoneTracker.recordBatteryEnabled = false;
+    phoneTracker.recordAppStatsEnabled = false;
+    phoneTracker.recordLocationEnabled = false;
+    phoneTracker.recordMotionEnabled = false;
 }
 
 
