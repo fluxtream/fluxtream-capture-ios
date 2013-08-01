@@ -26,8 +26,6 @@
 		01CAB3F9169DE1C70055FC28 /* BTSettingsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01CAB3F8169DE1C70055FC28 /* BTSettingsViewController.mm */; };
 		01CAB3FD169DEF470055FC28 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB3FB169DEF470055FC28 /* 19-gear.png */; };
 		01CAB3FE169DEF470055FC28 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB3FC169DEF470055FC28 /* 19-gear@2x.png */; };
-		01CAB401169DEFB80055FC28 /* 29-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB3FF169DEFB80055FC28 /* 29-heart.png */; };
-		01CAB402169DEFB80055FC28 /* 29-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB400169DEFB80055FC28 /* 29-heart@2x.png */; };
 		01CAB405169DF2B80055FC28 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB403169DF2B80055FC28 /* 86-camera.png */; };
 		01CAB406169DF2B80055FC28 /* 86-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB404169DF2B80055FC28 /* 86-camera@2x.png */; };
 		681662FB16861086006ADBA6 /* BTPhoneTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 681662FA16861086006ADBA6 /* BTPhoneTracker.mm */; };
@@ -45,8 +43,6 @@
 		68A0BE211639CD39006F66EB /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE171639CD39006F66EB /* Utils.cpp */; };
 		68A0BE221639CD39006F66EB /* NSUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE1A1639CD39006F66EB /* NSUtils.mm */; };
 		68A0BE231639CD39006F66EB /* Samples.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE1C1639CD39006F66EB /* Samples.cpp */; };
-		68A0BE281639D134006F66EB /* heartbeat_s1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 68A0BE261639D134006F66EB /* heartbeat_s1.aiff */; };
-		68A0BE291639D134006F66EB /* heartbeat_s2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 68A0BE271639D134006F66EB /* heartbeat_s2.aiff */; };
 		68F5976A167F359200376187 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F59769167F359200376187 /* CoreMotion.framework */; };
 		C86C7F6A16331CA200D72C56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86C7F6916331CA200D72C56 /* UIKit.framework */; };
 		C86C7F6C16331CA200D72C56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86C7F6B16331CA200D72C56 /* Foundation.framework */; };
@@ -98,8 +94,6 @@
 		01CAB3F8169DE1C70055FC28 /* BTSettingsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTSettingsViewController.mm; sourceTree = "<group>"; };
 		01CAB3FB169DEF470055FC28 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
 		01CAB3FC169DEF470055FC28 /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear@2x.png"; sourceTree = "<group>"; };
-		01CAB3FF169DEFB80055FC28 /* 29-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart.png"; sourceTree = "<group>"; };
-		01CAB400169DEFB80055FC28 /* 29-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart@2x.png"; sourceTree = "<group>"; };
 		01CAB403169DF2B80055FC28 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
 		01CAB404169DF2B80055FC28 /* 86-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera@2x.png"; sourceTree = "<group>"; };
 		681662F916861086006ADBA6 /* BTPhoneTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTPhoneTracker.h; path = Shared/BTPhoneTracker.h; sourceTree = SOURCE_ROOT; };
@@ -129,8 +123,6 @@
 		68A0BE1C1639CD39006F66EB /* Samples.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Samples.cpp; path = Shared/Samples.cpp; sourceTree = SOURCE_ROOT; };
 		68A0BE1D1639CD39006F66EB /* Samples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Samples.h; path = Shared/Samples.h; sourceTree = SOURCE_ROOT; };
 		68A0BE251639CEC9006F66EB /* Nickname.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Nickname.h; path = Shared/Nickname.h; sourceTree = SOURCE_ROOT; };
-		68A0BE261639D134006F66EB /* heartbeat_s1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = heartbeat_s1.aiff; path = Shared/heartbeat_s1.aiff; sourceTree = SOURCE_ROOT; };
-		68A0BE271639D134006F66EB /* heartbeat_s2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = heartbeat_s2.aiff; path = Shared/heartbeat_s2.aiff; sourceTree = SOURCE_ROOT; };
 		68F59769167F359200376187 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		C86C7F6516331CA200D72C56 /* GigaPan Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GigaPan Capture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86C7F6916331CA200D72C56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -258,7 +250,7 @@
 		C86C7F5A16331CA200D72C56 = {
 			isa = PBXGroup;
 			children = (
-				C86C7F6F16331CA200D72C56 /* FluxtreamCapture */,
+				C86C7F6F16331CA200D72C56 /* GigaPan Capture */,
 				C86C7F6816331CA200D72C56 /* Frameworks */,
 				C86C7F6616331CA200D72C56 /* Products */,
 			);
@@ -289,7 +281,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C86C7F6F16331CA200D72C56 /* FluxtreamCapture */ = {
+		C86C7F6F16331CA200D72C56 /* GigaPan Capture */ = {
 			isa = PBXGroup;
 			children = (
 				683E7B0416824446005BB855 /* ChannelList.h */,
@@ -324,6 +316,7 @@
 				C86C7F8116331CA200D72C56 /* MainStoryboard_iPhone.storyboard */,
 				C86C7F7016331CA200D72C56 /* Supporting Files */,
 			);
+			name = "GigaPan Capture";
 			path = FluxtreamCapture;
 			sourceTree = "<group>";
 		};
@@ -348,12 +341,8 @@
 				01CAB3FC169DEF470055FC28 /* 19-gear@2x.png */,
 				013638D416B84F890088FAF9 /* 20-no.png */,
 				013638D516B84F890088FAF9 /* 20-no@2x.png */,
-				01CAB3FF169DEFB80055FC28 /* 29-heart.png */,
-				01CAB400169DEFB80055FC28 /* 29-heart@2x.png */,
 				01CAB403169DF2B80055FC28 /* 86-camera.png */,
 				01CAB404169DF2B80055FC28 /* 86-camera@2x.png */,
-				68A0BE261639D134006F66EB /* heartbeat_s1.aiff */,
-				68A0BE271639D134006F66EB /* heartbeat_s2.aiff */,
 				C86C7F7B16331CA200D72C56 /* Default.png */,
 				C86C7F7D16331CA200D72C56 /* Default@2x.png */,
 				C86C7F7F16331CA200D72C56 /* Default-568h@2x.png */,
@@ -380,7 +369,7 @@
 			dependencies = (
 			);
 			name = "GigaPan Capture";
-			productName = FluxtreamCapture;
+			productName = GigaPanCapture;
 			productReference = C86C7F6516331CA200D72C56 /* GigaPan Capture.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -423,12 +412,8 @@
 				C86C7F8316331CA200D72C56 /* MainStoryboard_iPhone.storyboard in Resources */,
 				C86C7F9216331CA300D72C56 /* second.png in Resources */,
 				C86C7F9416331CA300D72C56 /* second@2x.png in Resources */,
-				68A0BE281639D134006F66EB /* heartbeat_s1.aiff in Resources */,
-				68A0BE291639D134006F66EB /* heartbeat_s2.aiff in Resources */,
 				01CAB3FD169DEF470055FC28 /* 19-gear.png in Resources */,
 				01CAB3FE169DEF470055FC28 /* 19-gear@2x.png in Resources */,
-				01CAB401169DEFB80055FC28 /* 29-heart.png in Resources */,
-				01CAB402169DEFB80055FC28 /* 29-heart@2x.png in Resources */,
 				01CAB405169DF2B80055FC28 /* 86-camera.png in Resources */,
 				01CAB406169DF2B80055FC28 /* 86-camera@2x.png in Resources */,
 				013AC799169F1F50008B4C3C /* BTPhotoCell.xib in Resources */,
