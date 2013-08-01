@@ -7,7 +7,6 @@
 //
 
 #import "BTSettingsViewController.h"
-#import "BTPulseTracker.h"
 #import "BTPhoneTracker.h"
 #import "BTAppDelegate.h"
 #import "Constants.h"
@@ -141,9 +140,6 @@
     [defaults setBool:_landscapeLeftUploadSwitch.isOn forKey:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_LEFT];
     [defaults setBool:_landscapeRightUploadSwitch.isOn forKey:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_RIGHT];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    BTPulseTracker *pulseTracker = [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] pulseTracker];
-    [self updateUploaderFromUI:pulseTracker.uploader];
     
     BTPhoneTracker *phoneTracker = [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] phoneTracker];
     [self updateUploaderFromUI:phoneTracker.batteryUploader];

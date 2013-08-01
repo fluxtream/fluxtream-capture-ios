@@ -42,7 +42,6 @@
 		684A4AD5163CD1C100C6513B /* TextViewLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 684A4AD4163CD1C000C6513B /* TextViewLogger.mm */; };
 		68A0BE1E1639CD39006F66EB /* Nickname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE131639CD39006F66EB /* Nickname.cpp */; };
 		68A0BE1F1639CD39006F66EB /* FluxtreamUploaderObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE151639CD39006F66EB /* FluxtreamUploaderObjc.mm */; };
-		68A0BE201639CD39006F66EB /* BTPulseTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE161639CD39006F66EB /* BTPulseTracker.mm */; };
 		68A0BE211639CD39006F66EB /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE171639CD39006F66EB /* Utils.cpp */; };
 		68A0BE221639CD39006F66EB /* NSUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE1A1639CD39006F66EB /* NSUtils.mm */; };
 		68A0BE231639CD39006F66EB /* Samples.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE1C1639CD39006F66EB /* Samples.cpp */; };
@@ -123,12 +122,10 @@
 		68A0BE131639CD39006F66EB /* Nickname.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Nickname.cpp; path = Shared/Nickname.cpp; sourceTree = SOURCE_ROOT; };
 		68A0BE141639CD39006F66EB /* FluxtreamUploaderObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FluxtreamUploaderObjc.h; path = Shared/FluxtreamUploaderObjc.h; sourceTree = SOURCE_ROOT; };
 		68A0BE151639CD39006F66EB /* FluxtreamUploaderObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FluxtreamUploaderObjc.mm; path = Shared/FluxtreamUploaderObjc.mm; sourceTree = SOURCE_ROOT; };
-		68A0BE161639CD39006F66EB /* BTPulseTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BTPulseTracker.mm; path = Shared/BTPulseTracker.mm; sourceTree = SOURCE_ROOT; };
 		68A0BE171639CD39006F66EB /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = Shared/Utils.cpp; sourceTree = SOURCE_ROOT; };
 		68A0BE181639CD39006F66EB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Shared/Utils.h; sourceTree = SOURCE_ROOT; };
 		68A0BE191639CD39006F66EB /* NSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSUtils.h; path = Shared/NSUtils.h; sourceTree = SOURCE_ROOT; };
 		68A0BE1A1639CD39006F66EB /* NSUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NSUtils.mm; path = Shared/NSUtils.mm; sourceTree = SOURCE_ROOT; };
-		68A0BE1B1639CD39006F66EB /* BTPulseTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTPulseTracker.h; path = Shared/BTPulseTracker.h; sourceTree = SOURCE_ROOT; };
 		68A0BE1C1639CD39006F66EB /* Samples.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Samples.cpp; path = Shared/Samples.cpp; sourceTree = SOURCE_ROOT; };
 		68A0BE1D1639CD39006F66EB /* Samples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Samples.h; path = Shared/Samples.h; sourceTree = SOURCE_ROOT; };
 		68A0BE251639CEC9006F66EB /* Nickname.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Nickname.h; path = Shared/Nickname.h; sourceTree = SOURCE_ROOT; };
@@ -300,8 +297,6 @@
 				019349FB169B630200870FDC /* Constants.h */,
 				681662F916861086006ADBA6 /* BTPhoneTracker.h */,
 				681662FA16861086006ADBA6 /* BTPhoneTracker.mm */,
-				68A0BE1B1639CD39006F66EB /* BTPulseTracker.h */,
-				68A0BE161639CD39006F66EB /* BTPulseTracker.mm */,
 				68A0BE141639CD39006F66EB /* FluxtreamUploaderObjc.h */,
 				68A0BE151639CD39006F66EB /* FluxtreamUploaderObjc.mm */,
 				684A4A80163C00F600C6513B /* Logger.h */,
@@ -474,7 +469,6 @@
 				C86C7F8916331CA200D72C56 /* BTFirstViewController.mm in Sources */,
 				68A0BE1E1639CD39006F66EB /* Nickname.cpp in Sources */,
 				68A0BE1F1639CD39006F66EB /* FluxtreamUploaderObjc.mm in Sources */,
-				68A0BE201639CD39006F66EB /* BTPulseTracker.mm in Sources */,
 				68A0BE211639CD39006F66EB /* Utils.cpp in Sources */,
 				68A0BE221639CD39006F66EB /* NSUtils.mm in Sources */,
 				68A0BE231639CD39006F66EB /* Samples.cpp in Sources */,

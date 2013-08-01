@@ -14,13 +14,6 @@
     NSTimer *hrStatusTimer;
     NSTimer *uploadStatusTimer;
 }
-@property (weak, nonatomic) IBOutlet UILabel *heartRateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *variabilityLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *heartImage;
-@property (weak, nonatomic) IBOutlet UILabel *hrConnectionStatusLabel;
-@property (weak, nonatomic) IBOutlet UILabel *hrDataStatusLabel;
-@property (weak, nonatomic) IBOutlet UILabel *hrUploadStatusLabel;
-@property (weak, nonatomic) IBOutlet UITextView *hrLogView;
 @property (weak, nonatomic) IBOutlet UILabel *buildLabel;
 
 @end

@@ -20,7 +20,6 @@
 #pragma clang diagnostic pop
     [TestFlight takeOff:@"f9c4aa0a-550e-4c8c-bdce-1b9dfa6b6f1b"];
     
-    _pulseTracker = [[BTPulseTracker alloc] init];
     _phoneTracker = [[BTPhoneTracker alloc] init];
     _photoUploader = [BTPhotoUploader sharedPhotoUploader];
     
