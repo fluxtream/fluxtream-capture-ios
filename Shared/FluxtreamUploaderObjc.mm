@@ -23,8 +23,7 @@
         uploadTimer = nil;
         self.maximumAge = 60.0;
         self.maximumUploadSampleCount = 10000;
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        self.serverPrefix = [defaults objectForKey:DEFAULTS_SERVER];
+        self.serverPrefix = @"http://this-should-not-ever-be-used";
         lastUploadTime = 0;
         uploadScheduled = 0;
         lastResult = @"";

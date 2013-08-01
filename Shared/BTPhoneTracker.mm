@@ -188,7 +188,7 @@ static UIApplication *app() {
     
     self.batteryUploader.maximumAge = 15*60; // seconds
     self.batteryCaptureTimer = NULL;
-    self.recordBatteryEnabled = [defaults boolForKey:DEFAULTS_RECORD_APP_STATS];
+    self.recordBatteryEnabled = false;
 }
 
 - (void)setRecordBatteryEnabled:(BOOL)recordBatteryEnabled {
@@ -279,7 +279,7 @@ static UIApplication *app() {
     self.appStatsUploader.password = [defaults objectForKey:DEFAULTS_PASSWORD];
     
     self.appStatsUploader.maximumAge = 15*60; // seconds
-    self.recordAppStatsEnabled = [defaults boolForKey:DEFAULTS_RECORD_APP_STATS];
+    self.recordAppStatsEnabled = false;
 }
 
 - (void)setRecordAppStatsEnabled:(BOOL)enabled {
@@ -386,7 +386,7 @@ static const char *authorizationStatusDescription(CLAuthorizationStatus status) 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.locationUploader.username = [defaults objectForKey:DEFAULTS_USERNAME];
     self.locationUploader.password = [defaults objectForKey:DEFAULTS_PASSWORD];
-    _recordLocationEnabled = [defaults boolForKey:DEFAULTS_RECORD_LOCATION];
+    _recordLocationEnabled = false;
     
     self.locationUploader.logSamples = YES;
     self.locationUploader.maximumAge = 15*60;
@@ -495,7 +495,7 @@ static const char *authorizationStatusDescription(CLAuthorizationStatus status) 
     self.motionManager.deviceMotionUpdateInterval = 1. / updateRate;
     self.motionQueue = [[NSOperationQueue alloc] init];
 
-    [self setRecordMotionEnabled:[defaults boolForKey:DEFAULTS_RECORD_MOTION]];
+    [self setRecordMotionEnabled:false];
 }
 
 - (void)setRecordMotionEnabled:(BOOL)recordMotionEnabled

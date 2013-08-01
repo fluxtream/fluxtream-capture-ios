@@ -35,20 +35,10 @@
     
     [defaultValues setObject:@"" forKey:DEFAULTS_USERNAME];
     [defaultValues setObject:@"" forKey:DEFAULTS_PASSWORD];
-    [defaultValues setObject:@"flxtest.bodytrack.org" forKey:DEFAULTS_SERVER];
     
     [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:DEFAULTS_FIRSTRUN];
     
-    [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:DEFAULTS_RECORD_LOCATION];
-    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:DEFAULTS_RECORD_MOTION];
-    [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:DEFAULTS_RECORD_APP_STATS];
-    [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:DEFAULTS_RECORD_HEARTRATE];
-    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:DEFAULTS_HEARTBEAT_SOUND];
-    
-    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:DEFAULTS_PHOTO_ORIENTATION_PORTRAIT];
-    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:DEFAULTS_PHOTO_ORIENTATION_UPSIDE_DOWN];
-    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_LEFT];
-    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_RIGHT];
+    [defaultValues setObject:[NSNumber numberWithBool:NO] forKey:DEFAULTS_PHOTO_UPLOAD_ALL_PANOS];
     
     [defaultValues setObject:[NSDate date] forKey:DEFAULTS_PHOTO_ORIENTATION_SETTINGS_CHANGED];
     

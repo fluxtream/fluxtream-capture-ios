@@ -14,11 +14,12 @@
 
 + (NSURLRequest *)metadataUploadRequestForAsset:(BTPhotoAsset *)asset
 {
-    // check we have a facet id for the asset before we begin, if not return nil
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *baseURL = [defaults objectForKey:DEFAULTS_SERVER];
-    NSArray *keyParts = [asset.uploadStatus componentsSeparatedByString:@"."]; //UID is the first item in the returned array
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"http://%@/api/bodytrack/metadata/%@/FluxtreamCapture.photo/%@/set", baseURL, [keyParts objectAtIndex:0], asset.facetID]]];
+
+    // check we have a facet id for the asset before we begin, if not return nil
+    // asset.facetID is ID returned by initial upload
+    NSMutableURLRequest *request =
+    [NSMutableURLRequest requestWithURL:[NSURL URLWithString: @"http://upload.gigapan.com/todo-upload-metadata"]];
     
     [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     [request setHTTPShouldHandleCookies:NO];

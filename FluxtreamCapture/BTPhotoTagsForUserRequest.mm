@@ -15,9 +15,8 @@
 + (NSURLRequest *)allPhotoTagsForUser:(NSString *)uid
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *baseURL = [defaults objectForKey:DEFAULTS_SERVER];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"http://%@/api/bodytrack/users/%@/tags", baseURL, uid]]];
-    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"http://upload.gigapan.com/todo-upload-tags"]]];
+
     [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     [request setHTTPShouldHandleCookies:NO];
     [request setTimeoutInterval:30];

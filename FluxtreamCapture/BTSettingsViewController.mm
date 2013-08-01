@@ -12,7 +12,6 @@
 #import "Constants.h"
 
 #define kPhotosToBeUploaded 1
-#define kServerWillChange   2
 
 @interface BTSettingsViewController ()
 
@@ -35,60 +34,13 @@
 
     [_username setText:[defaults objectForKey:DEFAULTS_USERNAME]];
     [_password setText:[defaults objectForKey:DEFAULTS_PASSWORD]];
-    [_server setText:[defaults objectForKey:DEFAULTS_SERVER]];
     
-    _locationSwitch = [[UISwitch alloc] init];
-    [_locationSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_locationCell setAccessoryView:_locationSwitch];
-    [_locationSwitch setOn:[defaults boolForKey:DEFAULTS_RECORD_LOCATION]];
-    
-    _motionSwitch = [[UISwitch alloc] init];
-    [_motionSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_motionCell setAccessoryView:_motionSwitch];
-    [_motionSwitch setOn:[defaults boolForKey:DEFAULTS_RECORD_MOTION]];
-    
-    _appStatsSwitch = [[UISwitch alloc] init];
-    [_appStatsSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_appStatsCell setAccessoryView:_appStatsSwitch];
-    [_appStatsSwitch setOn:[defaults boolForKey:DEFAULTS_RECORD_APP_STATS]];
-    
-    _heartRateSwitch = [[UISwitch alloc] init];
-    [_heartRateSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_recordHeartRateCell setAccessoryView:_heartRateSwitch];
-    [_heartRateSwitch setOn:[defaults boolForKey:DEFAULTS_RECORD_HEARTRATE]];
-    
-    _heartbeatSoundSwitch = [[UISwitch alloc] init];
-    [_heartbeatSoundSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_heartbeatSoundCell setAccessoryView:_heartbeatSoundSwitch];
-    [_heartbeatSoundSwitch setOn:[defaults boolForKey:DEFAULTS_HEARTBEAT_SOUND]];
-    
-    _portraitUploadSwitch = [[UISwitch alloc] init];
-    [_portraitUploadSwitch setTag:200];
-    [_portraitUploadSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_portraitUploadSwitch addTarget:self action:@selector(orientationSettingsChanged:) forControlEvents:UIControlEventValueChanged];
-    [_portraitCell setAccessoryView:_portraitUploadSwitch];
-    [_portraitUploadSwitch setOn:[defaults boolForKey:DEFAULTS_PHOTO_ORIENTATION_PORTRAIT]];
-    
-    _upsideDownUploadSwitch = [[UISwitch alloc] init];
-    [_upsideDownUploadSwitch setTag:201];
-    [_upsideDownUploadSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_upsideDownUploadSwitch addTarget:self action:@selector(orientationSettingsChanged:) forControlEvents:UIControlEventValueChanged];
-    [_upsideDownCell setAccessoryView:_upsideDownUploadSwitch];
-    [_upsideDownUploadSwitch setOn:[defaults boolForKey:DEFAULTS_PHOTO_ORIENTATION_UPSIDE_DOWN]];
-    
-    _landscapeLeftUploadSwitch = [[UISwitch alloc] init];
-    [_landscapeLeftUploadSwitch setTag:202];
-    [_landscapeLeftUploadSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_landscapeLeftUploadSwitch addTarget:self action:@selector(orientationSettingsChanged:) forControlEvents:UIControlEventValueChanged];
-    [_landscapeLeftCell setAccessoryView:_landscapeLeftUploadSwitch];
-    [_landscapeLeftUploadSwitch setOn:[defaults boolForKey:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_LEFT]];
-    
-    _landscapeRightUploadSwitch = [[UISwitch alloc] init];
-    [_landscapeRightUploadSwitch setTag:203];
-    [_landscapeRightUploadSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
-    [_landscapeRightUploadSwitch addTarget:self action:@selector(orientationSettingsChanged:) forControlEvents:UIControlEventValueChanged];
-    [_landscapeRightCell setAccessoryView:_landscapeRightUploadSwitch];
-    [_landscapeRightUploadSwitch setOn:[defaults boolForKey:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_RIGHT]];
+    _panoUploadSwitch = [[UISwitch alloc] init];
+    [_panoUploadSwitch setTag:200];
+    [_panoUploadSwitch addTarget:self action:@selector(updateFromUI:) forControlEvents:UIControlEventValueChanged];
+    [_panoUploadSwitch addTarget:self action:@selector(orientationSettingsChanged:) forControlEvents:UIControlEventValueChanged];
+    [_panoUploadCell setAccessoryView:_panoUploadSwitch];
+    [_panoUploadSwitch setOn:[defaults boolForKey:DEFAULTS_PHOTO_UPLOAD_ALL_PANOS]];
 }
 
 - (void)viewDidLoad
@@ -129,16 +81,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:_username.text forKey:DEFAULTS_USERNAME];
     [defaults setObject:_password.text forKey:DEFAULTS_PASSWORD];
-    [defaults setObject:_server.text forKey:DEFAULTS_SERVER];
-    [defaults setBool:_locationSwitch.isOn forKey:DEFAULTS_RECORD_LOCATION];
-    [defaults setBool:_motionSwitch.isOn forKey:DEFAULTS_RECORD_MOTION];
-    [defaults setBool:_appStatsSwitch.isOn forKey:DEFAULTS_RECORD_APP_STATS];
-    [defaults setBool:_heartRateSwitch.isOn forKey:DEFAULTS_RECORD_HEARTRATE];
-    [defaults setBool:_heartbeatSoundSwitch.isOn forKey:DEFAULTS_HEARTBEAT_SOUND];
-    [defaults setBool:_portraitUploadSwitch.isOn forKey:DEFAULTS_PHOTO_ORIENTATION_PORTRAIT];
-    [defaults setBool:_upsideDownUploadSwitch.isOn forKey:DEFAULTS_PHOTO_ORIENTATION_UPSIDE_DOWN];
-    [defaults setBool:_landscapeLeftUploadSwitch.isOn forKey:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_LEFT];
-    [defaults setBool:_landscapeRightUploadSwitch.isOn forKey:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_RIGHT];
+    [defaults setBool:_panoUploadSwitch.isOn forKey:DEFAULTS_PHOTO_UPLOAD_ALL_PANOS];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     BTPhoneTracker *phoneTracker = [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] phoneTracker];
@@ -190,19 +133,6 @@
     }
 }
 
-- (IBAction)serverWillChange:(id)sender
-{
-    NSString *messageBody = @"You shouldn't usually have to change this setting. Are you sure you want to proceed?";
-    
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Fluxtream Server"
-                                                      message:messageBody
-                                                     delegate:self
-                                            cancelButtonTitle:@"Cancel"
-                                            otherButtonTitles:@"Proceed", nil];
-    message.tag = kServerWillChange;
-    [message show];
-}
-
 #pragma mark - Photo uploader notifications
 
 - (void)photosToBeUploaded:(NSNotification *)notification
@@ -238,14 +168,6 @@
                 _photosForUpload = nil;
             }
             break;
-            
-        case kServerWillChange:
-            if (buttonIndex == 1) {
-                // the user wants to edit the server - proceed
-            } else {
-                // leave it
-                [_server resignFirstResponder];
-            }
             
         default:
             break;

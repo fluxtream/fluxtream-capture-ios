@@ -161,7 +161,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
 
             // TODO: decide what really qualifieds as a pano.  3264 is the width of a landscape iPhone 5 photo
             if (width > 3264) {
-                [self processAsset:result forOrientation:DEFAULTS_PHOTO_ORIENTATION_LANDSCAPE_LEFT];
+                [self processAsset:result];
             }
         }
  
@@ -181,10 +181,10 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
     }];
 }
 
-- (void)processAsset:(ALAsset *)asset forOrientation:(NSString *)orientationKey
+- (void)processAsset:(ALAsset *)asset
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    BOOL upload = [defaults boolForKey:orientationKey];
+    BOOL upload = [defaults boolForKey:DEFAULTS_PHOTO_UPLOAD_ALL_PANOS];
     NSString *status = [NSString stringWithFormat:@"%@", (upload ? @"1" : @"0")];
     NSDate *cutoffDate = [defaults objectForKey:DEFAULTS_PHOTO_ORIENTATION_SETTINGS_CHANGED];
     NSDate *assetDate = [asset valueForProperty:ALAssetPropertyDate];

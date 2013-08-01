@@ -327,9 +327,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="panoUploadCell" destination="yMs-AN-MPl" id="BgY-gx-UpR"/>
                         <outlet property="password" destination="xPH-df-dwe" id="qA4-CV-U0f"/>
                         <outlet property="passwordCell" destination="mX3-Oz-dyx" id="lpd-ZE-DZ8"/>
-                        <outlet property="portraitCell" destination="yMs-AN-MPl" id="nyZ-g7-ywM"/>
                         <outlet property="username" destination="Kaw-0j-cjg" id="hvi-i2-nPS"/>
                         <outlet property="usernameCell" destination="R6V-e6-g1c" id="sjr-Zg-6xz"/>
                     </connections>
@@ -411,20 +411,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BTSettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="orientationSettingsChanged:"/>
-                <relationship kind="action" name="serverWillChange:"/>
-                <relationship kind="outlet" name="appStatsCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="heartbeatSoundCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="landscapeLeftCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="landscapeRightCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="locationCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="motionCell" candidateClass="UITableViewCell"/>
+                <relationship kind="action" name="updateFromUI:"/>
+                <relationship kind="outlet" name="panoUploadCell" candidateClass="UITableViewCell"/>
                 <relationship kind="outlet" name="password" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="portraitCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="recordHeartRateCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="server" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="serverCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="upsideDownCell" candidateClass="UITableViewCell"/>
                 <relationship kind="outlet" name="username" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="usernameCell" candidateClass="UITableViewCell"/>
             </relationships>
