@@ -36,7 +36,7 @@
     
     [defaultValues setObject:@"" forKey:DEFAULTS_USERNAME];
     [defaultValues setObject:@"" forKey:DEFAULTS_PASSWORD];
-    [defaultValues setObject:@"flxtest.bodytrack.org" forKey:DEFAULTS_SERVER];
+    [defaultValues setObject:@"fluxtream.org" forKey:DEFAULTS_SERVER];
     
     [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:DEFAULTS_FIRSTRUN];
     
