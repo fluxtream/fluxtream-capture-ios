@@ -58,11 +58,11 @@
         _tags = [NSString stringWithString:_tagEntryView.text];
     
     [_delegate updateAnnotationsWithComment:_comment tags:_tags];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)cancelButtonTapped:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

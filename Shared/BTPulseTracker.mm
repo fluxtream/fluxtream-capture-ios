@@ -232,7 +232,7 @@ static NSString *getNickname(CBPeripheral *peripheral) {
         self.bestRSSI = -1e100;
         double waitTime = 3;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (waitTime * NSEC_PER_SEC)),
-                       dispatch_get_current_queue(),
+                       dispatch_get_main_queue(),
                        ^{ [self connectToBestSignal]; });
     } else {
         self.waitingForBestRSSI = NO;
