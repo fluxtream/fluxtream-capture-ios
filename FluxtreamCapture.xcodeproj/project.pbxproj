@@ -32,14 +32,15 @@
 		01CAB406169DF2B80055FC28 /* 86-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CAB404169DF2B80055FC28 /* 86-camera@2x.png */; };
 		681662FB16861086006ADBA6 /* BTPhoneTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 681662FA16861086006ADBA6 /* BTPhoneTracker.mm */; };
 		681662FD168E9547006ADBA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681662FC168E9547006ADBA6 /* CoreLocation.framework */; };
-		68348C5C1763901500A5CD42 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 68348C581763901500A5CD42 /* README.md */; };
-		68348C5D1763901500A5CD42 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 68348C591763901500A5CD42 /* release_notes.md */; };
 		68348C5E1763901500A5CD42 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68348C5B1763901500A5CD42 /* libTestFlight.a */; };
 		683E7B0616824446005BB855 /* ChannelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 683E7B0516824446005BB855 /* ChannelList.cpp */; };
 		683F861D1634AF2C006A35FE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 683F861C1634AF2C006A35FE /* libz.dylib */; };
 		684A4A87163C27A400C6513B /* UUID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 684A4A85163C27A300C6513B /* UUID.cpp */; };
 		684A4A89163C36DA00C6513B /* Logger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 684A4A88163C36DA00C6513B /* Logger.mm */; };
 		684A4AD5163CD1C100C6513B /* TextViewLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 684A4AD4163CD1C000C6513B /* TextViewLogger.mm */; };
+		6876C83E198EF101000272E1 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6876C838198EF101000272E1 /* libTestFlight.a */; };
+		6876C83F198EF101000272E1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6876C839198EF101000272E1 /* README.md */; };
+		6876C840198EF101000272E1 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 6876C83A198EF101000272E1 /* release_notes.md */; };
 		687A575D198E7381004287D8 /* locked.png in Resources */ = {isa = PBXBuildFile; fileRef = 687A575C198E7381004287D8 /* locked.png */; };
 		687A575F198E73A0004287D8 /* unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = 687A575E198E73A0004287D8 /* unlocked.png */; };
 		68A0BE1E1639CD39006F66EB /* Nickname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE131639CD39006F66EB /* Nickname.cpp */; };
@@ -122,6 +123,12 @@
 		684A4A88163C36DA00C6513B /* Logger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Logger.mm; path = Shared/Logger.mm; sourceTree = SOURCE_ROOT; };
 		684A4AD3163CD1C000C6513B /* TextViewLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewLogger.h; path = Shared/TextViewLogger.h; sourceTree = SOURCE_ROOT; };
 		684A4AD4163CD1C000C6513B /* TextViewLogger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextViewLogger.mm; path = Shared/TextViewLogger.mm; sourceTree = SOURCE_ROOT; };
+		6876C838198EF101000272E1 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		6876C839198EF101000272E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		6876C83A198EF101000272E1 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		6876C83B198EF101000272E1 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		6876C83C198EF101000272E1 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		6876C83D198EF101000272E1 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		687A575C198E7381004287D8 /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
 		687A575E198E73A0004287D8 /* unlocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlocked.png; sourceTree = "<group>"; };
 		68A0BE131639CD39006F66EB /* Nickname.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Nickname.cpp; path = Shared/Nickname.cpp; sourceTree = SOURCE_ROOT; };
@@ -168,6 +175,7 @@
 			files = (
 				01793CA4169F22B7009AF7F0 /* AssetsLibrary.framework in Frameworks */,
 				681662FD168E9547006ADBA6 /* CoreLocation.framework in Frameworks */,
+				6876C83E198EF101000272E1 /* libTestFlight.a in Frameworks */,
 				68F5976A167F359200376187 /* CoreMotion.framework in Frameworks */,
 				683F861D1634AF2C006A35FE /* libz.dylib in Frameworks */,
 				C875B20B1634648F00E150D9 /* AudioToolbox.framework in Frameworks */,
@@ -262,6 +270,19 @@
 			name = TestFlightSDK1.2.5;
 			sourceTree = "<group>";
 		};
+		6876C837198EF101000272E1 /* TestFlightSDK3.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				6876C838198EF101000272E1 /* libTestFlight.a */,
+				6876C839198EF101000272E1 /* README.md */,
+				6876C83A198EF101000272E1 /* release_notes.md */,
+				6876C83B198EF101000272E1 /* TestFlight+AsyncLogging.h */,
+				6876C83C198EF101000272E1 /* TestFlight+ManualSessions.h */,
+				6876C83D198EF101000272E1 /* TestFlight.h */,
+			);
+			path = TestFlightSDK3.0.2;
+			sourceTree = "<group>";
+		};
 		C86C7F5A16331CA200D72C56 = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +320,7 @@
 		C86C7F6F16331CA200D72C56 /* FluxtreamCapture */ = {
 			isa = PBXGroup;
 			children = (
+				6876C837198EF101000272E1 /* TestFlightSDK3.0.2 */,
 				683E7B0416824446005BB855 /* ChannelList.h */,
 				683E7B0516824446005BB855 /* ChannelList.cpp */,
 				019349FB169B630200870FDC /* Constants.h */,
@@ -444,6 +466,7 @@
 				68A0BE291639D134006F66EB /* heartbeat_s2.aiff in Resources */,
 				01CAB3FD169DEF470055FC28 /* 19-gear.png in Resources */,
 				01CAB3FE169DEF470055FC28 /* 19-gear@2x.png in Resources */,
+				6876C83F198EF101000272E1 /* README.md in Resources */,
 				687A575F198E73A0004287D8 /* unlocked.png in Resources */,
 				01CAB401169DEFB80055FC28 /* 29-heart.png in Resources */,
 				01CAB402169DEFB80055FC28 /* 29-heart@2x.png in Resources */,
@@ -454,8 +477,7 @@
 				01BBDD4C16B2E580009C7F29 /* appicon@2x.png in Resources */,
 				013638D816B84F890088FAF9 /* 20-no.png in Resources */,
 				013638D916B84F890088FAF9 /* 20-no@2x.png in Resources */,
-				68348C5C1763901500A5CD42 /* README.md in Resources */,
-				68348C5D1763901500A5CD42 /* release_notes.md in Resources */,
+				6876C840198EF101000272E1 /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,11 +626,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/FluxtreamCapture/TestFlightSDK1.2.5\"",
+					"$(PROJECT_DIR)/FluxtreamCapture/TestFlightSDK3.0.2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -632,11 +654,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/FluxtreamCapture/TestFlightSDK1.2.5\"",
+					"$(PROJECT_DIR)/FluxtreamCapture/TestFlightSDK3.0.2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
