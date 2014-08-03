@@ -7,8 +7,11 @@
 #define DEFAULTS_RECORD_LOCATION @"bodytrack_enable_record_location"
 #define DEFAULTS_RECORD_MOTION @"bodytrack_enable_record_motion"
 #define DEFAULTS_RECORD_APP_STATS @"bodytrack_enable_record_app_stats"
+
 #define DEFAULTS_RECORD_HEARTRATE @"bodytrack_enable_record_heartrate"
 #define DEFAULTS_HEARTBEAT_SOUND @"bodytrack_enable_heartbeat_sound"
+#define DEFAULTS_HEART_NICKNAME @"bodytrack_heart_nickname"
+#define DEFAULTS_HEART_CONNECT_ONLY_TO_NICKNAME @"bodytrack_heart_connect_only_to_nickname"
 
 #define DEFAULTS_PHOTO_ORIENTATION_PORTRAIT @"bodytrack_photo_upload_portrait"
 #define DEFAULTS_PHOTO_ORIENTATION_UPSIDE_DOWN @"bodytrack_photo_upload_upside_down"

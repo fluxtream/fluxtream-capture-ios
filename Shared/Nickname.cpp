@@ -928,7 +928,7 @@ const int placenameCount = sizeof(placenames) / sizeof(placenames[0]);
 
 static unsigned long long computeHash(const void *data, size_t len) {
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(data, len, digest);
+    CC_MD5(data, (unsigned int)len, digest);
     unsigned long long hash = 0;
     for (unsigned i = 0; i < sizeof(digest); i++) {
         hash ^= (digest[i] << (i % 8));

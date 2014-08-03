@@ -26,7 +26,7 @@ public:
         return index;
     }
     unsigned int size() const {
-        return lists[index].size();
+        return (int) lists[index].size();
     }
     std::string get(unsigned int i) const {
         return lists[index][i];

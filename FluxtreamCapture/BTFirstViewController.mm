@@ -92,18 +92,19 @@
     
     BTPulseTracker *pulseTracker = [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] pulseTracker];
     pulseTracker.logger = logger;
-    pulseTracker.uploader.username = [defaults objectForKey:DEFAULTS_USERNAME];
-    pulseTracker.uploader.password = [defaults objectForKey:DEFAULTS_PASSWORD];
-    pulseTracker.uploader.serverPrefix = [defaults objectForKey:DEFAULTS_SERVER];
-    
+        
     hrStatusTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateHRStatus) userInfo:nil repeats:YES];
     uploadStatusTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateUploadStatus) userInfo:nil repeats:YES];
+    
+    self.heartLockButton.selected = pulseTracker.connectOnlyToNickname;
 }
 
+- (BTPulseTracker*)pulseTracker {
+    return [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] pulseTracker];
+}
 
 - (void)didReceiveMemoryWarning
 {
-    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -127,7 +128,7 @@
     BTPulseTracker *pulseTracker = [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] pulseTracker];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    double PULSESCALE = 1.5;
+    float PULSESCALE = 1.5;
     double PULSEDURATION = 0.2 * 60.0 / pulseTracker.heartRate;
     
     [UIView animateWithDuration:PULSEDURATION delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
@@ -158,5 +159,10 @@
     self.hrUploadStatusLabel.text = [pulseTracker.uploader getStatus];
 }
 
+- (IBAction)onToggleHeartLock:(UIButton *)sender {
+    [sender setSelected:!sender.selected];
+    BTPulseTracker *pulseTracker = [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] pulseTracker];
+    pulseTracker.connectOnlyToNickname = sender.selected;
+}
 
 @end

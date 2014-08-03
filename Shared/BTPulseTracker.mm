@@ -2,7 +2,7 @@
 //  BTPulseTracker.m
 //  HeartRateMonitor
 //
-//  Created by Nick Winter on 10/20/12.
+//  Randy Sargent and Nick Winter
 //
 
 #import "BTPulseTracker.h"
@@ -14,10 +14,13 @@
 #import "NSUtils.h"
 #import "Samples.h"
 #include "Nickname.h"
+#include "Constants.h"
 
 #include "UUID.h"
 
 @interface BTPulseTracker()
+- (void)start;
+- (void)stop;
 - (void)startScan;
 - (void)stopScan;
 - (void)connectToBestSignal;
@@ -47,45 +50,51 @@ static UUID getUUID(CFUUIDRef uuid) {
  */
 static NSString *getNickname(CBPeripheral *peripheral) {
     // Polar H7 has unique identifier as part of name, awesome
-    if ([peripheral.name hasPrefix:@"Polar H7 "]) {
+    if ([peripheral.name hasPrefix:@"Polar H"]) {
         return peripheral.name;
     }
-    // Otherwise, give it a nickname according to UUID, if possible
+    // Otherwise, give it a nickname according to UUID, if we're already connected
     if (peripheral.UUID) {
         CFUUIDBytes uuid  = CFUUIDGetUUIDBytes(peripheral.UUID);
         return [NSString stringWithFormat:@"%@ (%s)", peripheral.name, computeNickname(&uuid, sizeof(uuid)).c_str()];
-    } else {
-        if (sizeof(peripheral) == 4) {
-            return [NSString stringWithFormat:@"%@ %08lX", peripheral.name, (unsigned long) peripheral];
-        } else {
-            return [NSString stringWithFormat:@"%@ %016llX", peripheral.name, (unsigned long long) peripheral];
-        }
     }
+    return peripheral.name;
 }
 
 @implementation BTPulseTracker
 @synthesize peripheral = _peripheral;
 
-
 #pragma mark - Object lifecycle
 
 - (id)init {
-    if(self = [super init]) {
+    if (self = [super init]) {
         self.lastStateChangeTime = 0;
         self.logger = [[Logger alloc] init];
-        self.autoConnect = YES;
+
         self.discoveredPeripherals = [[NSMutableArray alloc] init];
         
         self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-        if (self.autoConnect) [self tryConnect];
 
         self.uploader = [[FluxtreamUploaderObjc alloc] init];
         self.uploader.deviceNickname = @"PolarStrap";
         [self.uploader addChannel:@"HeartRate"];
         [self.uploader addChannel:@"BeatSpacing"];
         self.uploader.maximumAge = 60.0;
+        
+        [self readUploaderCredentialsFromDefaults];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        _connectNickname = [defaults stringForKey:DEFAULTS_HEART_NICKNAME];
+        _connectOnlyToNickname = [defaults boolForKey:DEFAULTS_HEART_CONNECT_ONLY_TO_NICKNAME];
+        self.enabled = [defaults boolForKey:DEFAULTS_RECORD_HEARTRATE];
     }
     return self;
+}
+
+- (void)readUploaderCredentialsFromDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.uploader.serverPrefix = [defaults objectForKey:DEFAULTS_SERVER];
+    self.uploader.username = [defaults objectForKey:DEFAULTS_USERNAME];
+    self.uploader.password = [defaults objectForKey:DEFAULTS_PASSWORD];
 }
 
 - (void)dealloc {
@@ -94,31 +103,49 @@ static NSString *getNickname(CBPeripheral *peripheral) {
     [self.peripheral setDelegate:nil];
 }
 
+#pragma mark - Enable/disable
+
+- (void)setEnabled:(BOOL)enabled
+{
+    enabled = !!enabled;
+    if (enabled != _enabled) {
+        _enabled = enabled;
+        if (enabled) {
+            [self start];
+        } else {
+            [self stop];
+        }
+    }
+}
+
+- (void)setConnectOnlyToNickname:(BOOL)connectOnlyToNickname
+{
+    connectOnlyToNickname = !!connectOnlyToNickname;
+    if (connectOnlyToNickname != _connectOnlyToNickname) {
+        _connectOnlyToNickname = connectOnlyToNickname;
+        [[NSUserDefaults standardUserDefaults] setBool:connectOnlyToNickname forKey:DEFAULTS_HEART_CONNECT_ONLY_TO_NICKNAME];
+        if (!self.peripheral) {
+            [self startScan];
+        }
+    }
+}
+
 #pragma mark - Public connection stuff
 
-- (void)disconnect {
-    self.autoConnect = NO;
-    if (self.peripheral) {
-        [self disconnectPeripheral: self.peripheral];
-    }
-}
-
-- (void)tryConnect {
-    if (!self.peripheral) {
-        [self.discoveredPeripherals removeAllObjects];
-        [self startScan];
-    }
-}
-
 - (NSString *)connectionStatus {
-    NSString *nickname = self.peripheralNickname;
     switch (self.state) {
+        case BTPulseTrackerDisabledState:
+            return [NSString stringWithFormat:@"Go to Settings to turn on pulse tracking"];
         case BTPulseTrackerScanState:
-            return [NSString stringWithFormat:@"Scanning for heart rate monitor"];
+            if (self.connectOnlyToNickname && self.connectNickname) {
+                return [NSString stringWithFormat:@"Scanning for %@", self.connectNickname];
+            } else {
+                return [NSString stringWithFormat:@"Scanning for heart rate monitor"];
+            }
         case BTPulseTrackerConnectingState:
-            return [NSString stringWithFormat:@"Connecting to %@", nickname];
+            return [NSString stringWithFormat:@"Connecting to %@", self.nickname];
         case BTPulseTrackerConnectedState:
-            return [NSString stringWithFormat:@"Connected to %@", nickname];
+            return [NSString stringWithFormat:@"Connected to %@", self.nickname];
         case BTPulseTrackerStoppedState:
             return [NSString stringWithFormat:@"Stopped"];
         default:
@@ -127,7 +154,7 @@ static NSString *getNickname(CBPeripheral *peripheral) {
 }
 - (NSString *)connectionStatusWithDuration {
     NSString *status = self.connectionStatus;
-    if (self.lastStateChangeTime != 0 && doubletime() - self.lastStateChangeTime > 2.0) {
+    if (self.enabled && self.lastStateChangeTime != 0 && doubletime() - self.lastStateChangeTime > 2.0) {
         status = [self.connectionStatus stringByAppendingFormat:@" for %@",
                   printDuration(doubletime() - self.lastStateChangeTime)];
     }
@@ -144,6 +171,22 @@ static NSString *getNickname(CBPeripheral *peripheral) {
         return @"Receiving data.";
     } else {
         return [NSString stringWithFormat:@"Data last received %@ ago.", printDuration(age)];
+    }
+}
+
+- (void)stop {
+    [self stopScan];
+    if (self.peripheral) {
+        [self disconnectPeripheral: self.peripheral];
+    }
+    [self.discoveredPeripherals removeAllObjects];
+    self.state = BTPulseTrackerDisabledState;
+    self.peripheral = NULL;
+}
+
+- (void)start {
+    if (!self.peripheral) {
+        [self startScan];
     }
 }
 
@@ -167,7 +210,7 @@ static NSString *getNickname(CBPeripheral *peripheral) {
     }
 }
 
--(NSString*)peripheralNickname {
+-(NSString*)nickname {
     if (self.peripheral) return getNickname(self.peripheral);
     else return nil;
 }
@@ -188,7 +231,7 @@ static NSString *getNickname(CBPeripheral *peripheral) {
 
 /*
  * Do we support Bluetooth LE?
- * Raise alert if Bluetooth LE is not enabled or is not supported.
+ * Raise alert if Bluetooth LE is not d or is not supported.
  */
 - (BOOL) checkBluetooth
 {
@@ -226,7 +269,9 @@ static NSString *getNickname(CBPeripheral *peripheral) {
     self.manufacturer = @"";
     self.heartRate = 0;
 
-    if (self.connectMode == kConnectBestSignalMode) {
+    if (self.connectOnlyToNickname) {
+        self.waitingForBestRSSI = NO;
+    } else {
         self.waitingForBestRSSI = YES;
         self.bestPeripheral = nil;
         self.bestRSSI = -1e100;
@@ -234,8 +279,6 @@ static NSString *getNickname(CBPeripheral *peripheral) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (waitTime * NSEC_PER_SEC)),
                        dispatch_get_main_queue(),
                        ^{ [self connectToBestSignal]; });
-    } else {
-        self.waitingForBestRSSI = NO;
     }
     [self.manager scanForPeripheralsWithServices:[NSArray arrayWithObject:[CBUUID UUIDWithString:@"180D"]] options:nil];
 }
@@ -411,30 +454,37 @@ static NSString *getNickname(CBPeripheral *peripheral) {
 - (void) centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)nsRSSI
 {
     double rssi = [nsRSSI doubleValue];
+    
     if (self.waitingForBestRSSI) {
+        // Watch for best RSSI until time is up
         [self.logger logVerbose:@"Found %@ with signal strength %g", getNickname(peripheral), rssi];
         if (!self.bestPeripheral || rssi > self.bestRSSI) {
             self.bestPeripheral = peripheral;
             self.bestRSSI = rssi;
         }
+    } else if (!self.connectOnlyToNickname ||
+               !self.connectNickname ||
+               [self.connectNickname isEqualToString:getNickname(peripheral)]) {
+        // Either we're specifically looking for a particular device by nickname,
+        // or we've expired the RSSI search timeout without finding anything.
+        // Either way, connect now.
+        [self connectPeripheral: peripheral];
     } else {
-        if (self.connectMode == kConnectUUIDMode && peripheral.UUID && getUUID(peripheral.UUID) != self.connectUUID) {
-            // Not the device we're looking for
-            [self.logger logVerbose:@"Found device %@", getNickname(peripheral)];
-        } else {
-            [self connectPeripheral:peripheral];
-        }
+        // Not the device we're looking for
+        [self.logger logVerbose:@"Ignoring device %@", getNickname(peripheral)];
     }
 }
 
 - (void) connectToBestSignal
 {
-    self.waitingForBestRSSI = NO;
-    if (!self.peripheral && self.bestPeripheral) {
-        [self.logger logVerbose:@"Best signal is %@", getNickname(self.bestPeripheral)];
-        [self connectPeripheral: self.bestPeripheral];
-    } else if (!self.bestPeripheral) {
-        NSLog(@"No devices found by best signal collection timeout");
+    if (self.waitingForBestRSSI) {
+        self.waitingForBestRSSI = NO;
+        if (!self.peripheral && self.bestPeripheral) {
+            [self.logger logVerbose:@"Best signal is %@", getNickname(self.bestPeripheral)];
+            [self connectPeripheral: self.bestPeripheral];
+        } else if (!self.bestPeripheral) {
+            NSLog(@"No devices found by best signal collection timeout");
+        }
     }
 }
 
@@ -456,14 +506,15 @@ static NSString *getNickname(CBPeripheral *peripheral) {
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
     self.lastBeatTimeValid = false;
-    if (self.connectMode == kConnectUUIDMode && self.connectUUID != getUUID(peripheral.UUID)) {
-        [self.logger logVerbose:@"(Disconnecting from wrong device %@)", getNickname(peripheral)];
-        [self disconnectPeripheral:peripheral];
-    } else if (peripheral != self.peripheral) {
+    if (peripheral != self.peripheral) {
         [self.logger logVerbose:@"(Disconnecting from unexpected device %@)", getNickname(peripheral)];
         [self disconnectPeripheral:peripheral];
     } else {
         self.state = BTPulseTrackerConnectedState;
+        self.connectNickname = getNickname(peripheral);
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.connectNickname forKey:DEFAULTS_HEART_NICKNAME];
+
         [self.logger logVerbose:@"Peripheral UUID=%@", hex(peripheral.UUID)];
         [peripheral discoverServices:nil];
     }
@@ -488,7 +539,9 @@ static NSString *getNickname(CBPeripheral *peripheral) {
 {
     if (self.peripheral == peripheral) {
         [self.logger log:@"Lost connection to %@", getNickname(peripheral)];
-        [self startScan];
+        if (self.enabled) {
+            [self startScan];
+        }
     } else {
         [self.logger logVerbose:@"(Disconnected from %@)", getNickname(peripheral)];
     }

@@ -2,8 +2,7 @@
 //  BTPulseTracker.h
 //  HeartRateMonitor
 //
-//  Created by Nick Winter on 10/20/12.
-//  Copyright (c) 2012 BodyTrack.
+//  Randy Sargent and Nick Winter
 //
 
 /*
@@ -32,32 +31,24 @@
 @property (weak) id<BTPulseTrackerDelegate> delegate;  /// Delegate receives notifications on peripheral connection changes, as well as pulse changes.
 @property (strong) Logger *logger;
 
+@property (nonatomic) BOOL enabled;
+@property (nonatomic) BOOL heartbeatSoundEnabled;
+
 @property (strong) NSTimer *pulseTimer;
 
-@property (assign) BOOL autoConnect;
+@property (nonatomic) BOOL connectOnlyToNickname;
+@property (nonatomic) NSString *connectNickname;
 
 typedef enum {
-    kConnectBestSignalMode = 0,
-    kConnectUUIDMode = 1
-} BTPulseTrackerConnectMode;
-
-typedef enum {
-    BTPulseTrackerScanState = 0,
-    BTPulseTrackerConnectingState = 1,
-    BTPulseTrackerConnectedState = 2,
-    BTPulseTrackerStoppedState = 3
+    BTPulseTrackerDisabledState = 0,
+    BTPulseTrackerScanState = 1,
+    BTPulseTrackerConnectingState = 2,
+    BTPulseTrackerConnectedState = 3,
+    BTPulseTrackerStoppedState = 4
 } BTPulseTrackerState;
-
-@property BTPulseTrackerConnectMode connectMode;
-@property UUID connectUUID;
 
 @property double lastStateChangeTime;
 @property (nonatomic) BTPulseTrackerState state;
-
-// TODO(rsargent): honor the "enabled" property
-@property (nonatomic) BOOL enabled;
-
-@property (nonatomic) BOOL heartbeatSoundEnabled;
 
 @property (readonly) NSString *connectionStatus;
 @property (readonly) NSString *connectionStatusWithDuration;
@@ -73,8 +64,6 @@ typedef enum {
 @property (assign) BOOL lastBeatTimeValid;
 @property double lastHRDataReceived;
 
-- (void)tryConnect;
-- (void)disconnect;
 - (BOOL)checkBluetooth;
 
 @end

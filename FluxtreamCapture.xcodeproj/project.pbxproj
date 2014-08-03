@@ -40,6 +40,8 @@
 		684A4A87163C27A400C6513B /* UUID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 684A4A85163C27A300C6513B /* UUID.cpp */; };
 		684A4A89163C36DA00C6513B /* Logger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 684A4A88163C36DA00C6513B /* Logger.mm */; };
 		684A4AD5163CD1C100C6513B /* TextViewLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 684A4AD4163CD1C000C6513B /* TextViewLogger.mm */; };
+		687A575D198E7381004287D8 /* locked.png in Resources */ = {isa = PBXBuildFile; fileRef = 687A575C198E7381004287D8 /* locked.png */; };
+		687A575F198E73A0004287D8 /* unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = 687A575E198E73A0004287D8 /* unlocked.png */; };
 		68A0BE1E1639CD39006F66EB /* Nickname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE131639CD39006F66EB /* Nickname.cpp */; };
 		68A0BE1F1639CD39006F66EB /* FluxtreamUploaderObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE151639CD39006F66EB /* FluxtreamUploaderObjc.mm */; };
 		68A0BE201639CD39006F66EB /* BTPulseTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68A0BE161639CD39006F66EB /* BTPulseTracker.mm */; };
@@ -120,6 +122,8 @@
 		684A4A88163C36DA00C6513B /* Logger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Logger.mm; path = Shared/Logger.mm; sourceTree = SOURCE_ROOT; };
 		684A4AD3163CD1C000C6513B /* TextViewLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewLogger.h; path = Shared/TextViewLogger.h; sourceTree = SOURCE_ROOT; };
 		684A4AD4163CD1C000C6513B /* TextViewLogger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextViewLogger.mm; path = Shared/TextViewLogger.mm; sourceTree = SOURCE_ROOT; };
+		687A575C198E7381004287D8 /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
+		687A575E198E73A0004287D8 /* unlocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlocked.png; sourceTree = "<group>"; };
 		68A0BE131639CD39006F66EB /* Nickname.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Nickname.cpp; path = Shared/Nickname.cpp; sourceTree = SOURCE_ROOT; };
 		68A0BE141639CD39006F66EB /* FluxtreamUploaderObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FluxtreamUploaderObjc.h; path = Shared/FluxtreamUploaderObjc.h; sourceTree = SOURCE_ROOT; };
 		68A0BE151639CD39006F66EB /* FluxtreamUploaderObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FluxtreamUploaderObjc.mm; path = Shared/FluxtreamUploaderObjc.mm; sourceTree = SOURCE_ROOT; };
@@ -364,6 +368,8 @@
 				C86C7F7F16331CA200D72C56 /* Default-568h@2x.png */,
 				C86C7F9116331CA300D72C56 /* second.png */,
 				C86C7F9316331CA300D72C56 /* second@2x.png */,
+				687A575E198E73A0004287D8 /* unlocked.png */,
+				687A575C198E7381004287D8 /* locked.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -434,9 +440,11 @@
 				C86C7F9216331CA300D72C56 /* second.png in Resources */,
 				C86C7F9416331CA300D72C56 /* second@2x.png in Resources */,
 				68A0BE281639D134006F66EB /* heartbeat_s1.aiff in Resources */,
+				687A575D198E7381004287D8 /* locked.png in Resources */,
 				68A0BE291639D134006F66EB /* heartbeat_s2.aiff in Resources */,
 				01CAB3FD169DEF470055FC28 /* 19-gear.png in Resources */,
 				01CAB3FE169DEF470055FC28 /* 19-gear@2x.png in Resources */,
+				687A575F198E73A0004287D8 /* unlocked.png in Resources */,
 				01CAB401169DEFB80055FC28 /* 29-heart.png in Resources */,
 				01CAB402169DEFB80055FC28 /* 29-heart@2x.png in Resources */,
 				01CAB405169DF2B80055FC28 /* 86-camera.png in Resources */,
@@ -600,6 +608,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -627,6 +636,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

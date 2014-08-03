@@ -94,7 +94,7 @@ std::string Samples::getJSON(size_t sampleCount,
 
 std::string Samples::getSampleJSON(size_t sequence) const {
     ScopedLock l(lock);
-    int index = sequence - firstSequence;
+    int index = (int) (sequence - firstSequence);
     std::string ret = "{";
     int col = 0;
     // TODO(rsargent): quote field name?

@@ -29,7 +29,7 @@
     NSString *body = [NSString stringWithFormat:@"comment=%@&tags=%@", asset.comment, asset.tags];
     
     [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES]];
-    [request addValue:[NSString stringWithFormat:@"%i", [body length]] forHTTPHeaderField:@"Content-Length"];
+    [request addValue:[NSString stringWithFormat:@"%lu", (unsigned long)[body length]] forHTTPHeaderField:@"Content-Length"];
     
     NSString *authStr = [NSString stringWithFormat:@"%@:%@", [defaults valueForKey:DEFAULTS_USERNAME], [defaults valueForKey:DEFAULTS_PASSWORD]];
     

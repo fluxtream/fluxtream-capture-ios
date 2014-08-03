@@ -91,7 +91,7 @@
                      completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                          NSLog(@"%@ got %@", self.deviceNickname, [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
                          if (error) {
-                             NSLog(@"%@ got error code %d", self.deviceNickname, [error code]);
+                             NSLog(@"%@ got error code %ld", self.deviceNickname, (long)[error code]);
                              switch ([error code]) {
                                  case NSURLErrorUserCancelledAuthentication:
                                  case NSURLErrorUserAuthenticationRequired:
@@ -106,7 +106,7 @@
                                      break;
                              }
                          } else {
-                             int statusCode = [(NSHTTPURLResponse*) response statusCode];
+                             int statusCode = (int)[(NSHTTPURLResponse*) response statusCode];
                              NSLog(@"%@ success with HTTP status %d", self.deviceNickname, statusCode);
                              lastResult = @"";
                              [[NSNotificationCenter defaultCenter] postNotificationName:BT_NOTIFICATION_UPLOAD_SUCCEEDED object:self];
@@ -226,7 +226,7 @@
         for (unsigned i = 0; i < stdStringValues.size(); i++) {
             stdStringValues[i] = [stringValues[i] UTF8String];
         }
-        sequence = [self samples]->addSample(time, numericValues, numericCount, &stdStringValues[0], stdStringValues.size());
+        sequence = [self samples]->addSample(time, numericValues, numericCount, &stdStringValues[0], (unsigned int)stdStringValues.size());
     }
     if (self.logSamples) {
         NSLog(@"%s", [self samples]->getSampleJSON(sequence).c_str());

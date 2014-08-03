@@ -143,6 +143,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     BTPulseTracker *pulseTracker = [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] pulseTracker];
+    pulseTracker.enabled = [defaults boolForKey:DEFAULTS_RECORD_HEARTRATE];
     [self updateUploaderFromUI:pulseTracker.uploader];
     
     BTPhoneTracker *phoneTracker = [(BTAppDelegate *)[[UIApplication sharedApplication] delegate] phoneTracker];
@@ -156,6 +157,8 @@
     phoneTracker.recordAppStatsEnabled = [defaults boolForKey:DEFAULTS_RECORD_APP_STATS];
     phoneTracker.recordLocationEnabled = [defaults boolForKey:DEFAULTS_RECORD_LOCATION];
     phoneTracker.recordMotionEnabled = [defaults boolForKey:DEFAULTS_RECORD_MOTION];
+    
+
 }
 
 

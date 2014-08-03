@@ -67,7 +67,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
     [body appendData:[closingBoundary dataUsingEncoding:NSUTF8StringEncoding]];
     
     [request setHTTPBody:body];
-    [request addValue:[NSString stringWithFormat:@"%i", [body length]] forHTTPHeaderField:@"Content-Length"];
+    [request addValue:[NSString stringWithFormat:@"%lu", (unsigned long)[body length]] forHTTPHeaderField:@"Content-Length"];
     
     NSString *authStr = [NSString stringWithFormat:@"%@:%@", [defaults valueForKey:DEFAULTS_USERNAME], [defaults valueForKey:DEFAULTS_PASSWORD]];
     

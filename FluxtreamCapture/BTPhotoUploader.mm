@@ -51,7 +51,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
             NSArray *unuploadedPhotos = [self removeUploadedPhotosFromArray:orientedPhotos];
             
             if (unuploadedPhotos) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:BT_NOTIFICATION_PHOTOS_TO_BE_UPLOADED object:self userInfo:@{@"count":[NSNumber numberWithInt:[unuploadedPhotos count]], @"orientation":[NSNumber numberWithInt:requestedOrientation], @"urls":[NSArray arrayWithArray:unuploadedPhotos]}];
+                [[NSNotificationCenter defaultCenter] postNotificationName:BT_NOTIFICATION_PHOTOS_TO_BE_UPLOADED object:self userInfo:@{@"count":[NSNumber numberWithInt:(int)[unuploadedPhotos count]], @"orientation":[NSNumber numberWithInt:requestedOrientation], @"urls":[NSArray arrayWithArray:unuploadedPhotos]}];
             }
         };
     };
@@ -226,7 +226,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
         _isUploading = YES;
         NSLog(@"photoUploader uploadNow");
         
-        int i = [self photoIndexForUpload];
+        long i = [self photoIndexForUpload];
 
         if (i == NSNotFound) {
             NSLog(@"No photos marked for upload");
@@ -256,7 +256,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
                 [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
 
                     if (error) {
-                        NSLog(@"photo upload error code: %d", [error code]);
+                        NSLog(@"photo upload error code: %ld", (long)[error code]);
                         switch ([error code]) {
                             case NSURLErrorUserCancelledAuthentication:
                             case NSURLErrorUserAuthenticationRequired:
@@ -276,7 +276,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
                         }
                         _isUploading = NO;
                     } else {
-                        int statusCode = [(NSHTTPURLResponse *) response statusCode];
+                        int statusCode = (int)[(NSHTTPURLResponse *) response statusCode];
                         NSLog(@"photo uploader got %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
                         NSLog(@"photo upload success: status %d", statusCode);
                         
@@ -297,7 +297,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
 
                         [_photos replaceObjectAtIndex:i withObject:photoAsset];
                         [self savePhotosArray];
-                        [[NSNotificationCenter defaultCenter] postNotificationName:BT_NOTIFICATION_PHOTO_UPLOAD_SUCCEEDED object:self userInfo:@{@"index":[NSNumber numberWithInt:i]}];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:BT_NOTIFICATION_PHOTO_UPLOAD_SUCCEEDED object:self userInfo:@{@"index":[NSNumber numberWithInt:(int)i]}];
                         _isUploading = NO;
                         [self uploadNow];
                     }
@@ -310,7 +310,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
 }
 
 
-- (int)photoIndexForUpload
+- (long)photoIndexForUpload
 {
     for (int i = 0; i < [_photos count]; i++) {
         BTPhotoAsset *photoAsset = [_photos objectAtIndex:i];

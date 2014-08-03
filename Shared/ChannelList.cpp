@@ -11,7 +11,7 @@
 // Not thread-safe;  caller must hold a lock on "mutex"
 
 int ChannelList::createList(const char *lst) {
-    int idx = lists.size();
+    int idx = (int)lists.size();
     
     ids[lst] = idx;
 
