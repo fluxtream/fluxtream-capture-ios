@@ -280,7 +280,7 @@ static NSString *const kBoundary = @"b0uNd4rYb0uNd4rYaehrtiffegbib";
                         NSLog(@"photo uploader got %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
                         NSLog(@"photo upload success: status %d", statusCode);
                         
-                        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:nil error:&error];
+                        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
                         
                         if ([photoAsset.uploadStatus isEqual:@"1"]) {
                             NSLog(@"returned from upload request for photo");
